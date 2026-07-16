@@ -1,0 +1,2320 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Central Medical Associates provides physician-led primary care, addiction medicine, mental health services, diagnostics, and chronic care support in Elizabethtown and Radcliff, Kentucky." name="description"/>
+<meta content="#24463F" name="theme-color"/>
+<meta content="Central Medical Associates | Elizabethtown &amp; Radcliff, KY" property="og:title"/>
+<meta content="Comprehensive, physician-led care for every generation across five convenient Kentucky locations." property="og:description"/>
+<meta content="website" property="og:type"/>
+<title>Central Medical Associates | Elizabethtown &amp; Radcliff, KY</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%2324463F'/><text x='50' y='70' font-size='54' font-family='Georgia' fill='%23F1F3EC' text-anchor='middle'>C</text></svg>">
+<link rel="preload" as="image" href="assets/img/hero.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalOrganization",
+  "name": "Central Medical Associates",
+  "slogan": "Patients are central to our mission.",
+  "medicalSpecialty": ["PrimaryCare", "Psychiatric"],
+  "foundingDate": "2016",
+  "areaServed": "Hardin County, Kentucky",
+  "department": [
+    {"@type": "MedicalClinic", "name": "CMA — Quadri", "telephone": "+1-270-769-0892", "address": {"@type": "PostalAddress", "streetAddress": "1311 Ring Road, Suite 105", "addressLocality": "Elizabethtown", "addressRegion": "KY", "postalCode": "42701"}},
+    {"@type": "MedicalClinic", "name": "CMA — Nasir", "telephone": "+1-270-900-4555", "address": {"@type": "PostalAddress", "streetAddress": "1311 Ring Road, Suite 101", "addressLocality": "Elizabethtown", "addressRegion": "KY", "postalCode": "42701"}},
+    {"@type": "MedicalClinic", "name": "CMA — Ahmed", "telephone": "+1-270-986-7392", "address": {"@type": "PostalAddress", "streetAddress": "1321 Ring Road, Suite 107", "addressLocality": "Elizabethtown", "addressRegion": "KY", "postalCode": "42701"}},
+    {"@type": "MedicalClinic", "name": "CMA — Psychiatry", "telephone": "+1-270-982-2002", "address": {"@type": "PostalAddress", "streetAddress": "1321 Ring Road, Suite 105", "addressLocality": "Elizabethtown", "addressRegion": "KY", "postalCode": "42701"}},
+    {"@type": "MedicalClinic", "name": "Family Healing and Health (FHH)", "telephone": "+1-270-737-1215", "address": {"@type": "PostalAddress", "streetAddress": "5900 N Dixie Highway", "addressLocality": "Elizabethtown", "addressRegion": "KY", "postalCode": "42701"}},
+    {"@type": "MedicalClinic", "name": "CMA — Movania", "telephone": "+1-270-351-3192", "address": {"@type": "PostalAddress", "streetAddress": "700 W Lincoln Trail Blvd", "addressLocality": "Radcliff", "addressRegion": "KY", "postalCode": "40160"}}
+  ]
+}
+</script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&amp;family=Source+Sans+3:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+
+  :root{
+    --pine: #24463F;
+    --pine-light: #3C6B60;
+    --pine-pale: #DCE6E0;
+    --gold: #A97A2B;
+    --gold-light: #C79A4F;
+    --deepblue: #1B3A5C;
+    --paper: #F1F3EC;
+    --paper-deep: #E7EADC;
+    --card: #FAFAF5;
+    --ink: #1D2B26;
+    --ink-soft: #4B5A54;
+    --line: #D3D8C8;
+    --white: #FFFFFF;
+    --max: 1440px;
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+  [id]{scroll-margin-top:96px;}
+  html{scroll-behavior:smooth;}
+  body{
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  img{max-width:100%; display:block;}
+  a{color:inherit;}
+  .wrap{max-width: var(--max); margin:0 auto; padding: 0 32px;}
+
+  h1,h2,h3,h4{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    color: var(--pine);
+    line-height:1.12;
+    letter-spacing:-0.01em;
+  }
+
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color: var(--gold);
+    font-weight:600;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:22px; height:1px;
+    background: var(--gold);
+    display:inline-block;
+  }
+
+  /* ---------- NAV ---------- */
+  header{
+    position:sticky; top:0; z-index:50;
+    background: rgba(241,243,236,0.94);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-inner{
+    max-width: var(--max); margin:0 auto; padding: 16px 32px;
+    display:flex; align-items:center; justify-content:space-between;
+    gap: 20px;
+  }
+  .brand{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size: 20px;
+    color: var(--pine);
+    letter-spacing:-0.01em;
+    display:flex;
+    flex-direction:column;
+    line-height:1.05;
+  }
+  .brand span{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--deepblue);
+    font-weight:600;
+    margin-top:4px;
+    white-space: nowrap;
+  }
+  @media (max-width:700px){
+    .brand span{ white-space:normal; max-width:220px; }
+  }
+  .brand-loc{
+    color: var(--ink-soft) !important;
+    font-weight:500 !important;
+    letter-spacing:0.08em !important;
+    margin-top:2px !important;
+  }
+  nav ul{
+    list-style:none; display:flex; gap: 28px;
+  }
+  nav a{
+    text-decoration:none;
+    font-size:14.5px;
+    font-weight:600;
+    color: var(--ink-soft);
+    letter-spacing:0.01em;
+    transition: color .15s ease;
+  }
+  nav a:hover{color:var(--pine);}
+  .nav-cta{
+    background: var(--pine);
+    color: var(--white) !important;
+    padding: 10px 18px;
+    border-radius: 2px;
+    font-size:13.5px !important;
+    white-space:nowrap;
+  }
+  .nav-toggle{display:none;}
+  @media (max-width:900px){
+    nav ul{display:none;}
+    .nav-toggle{display:block; background:none;border:1px solid var(--pine); color:var(--pine); font-family:'IBM Plex Mono',monospace; font-size:11px; padding:8px 12px; letter-spacing:.08em;}
+  }
+
+  /* ---------- ANNOUNCEMENT BANNER ---------- */
+  .announce-bar{
+    background: var(--gold);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+  }
+  .announce-inner{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap: 12px;
+    flex-wrap:wrap;
+    padding: 11px 32px;
+    text-align:center;
+  }
+  .announce-badge{
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 11.5px;
+    font-weight:700;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    background: var(--white);
+    color: var(--gold);
+    padding: 3px 10px;
+    border-radius: 2px;
+    animation: announce-pulse 2.2s ease-in-out infinite;
+  }
+  .announce-text{
+    font-size: 14.5px;
+    font-weight:600;
+    color: var(--white);
+  }
+  .announce-link{
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 12.5px;
+    font-weight:600;
+    color: var(--white);
+    text-decoration:underline;
+    white-space:nowrap;
+  }
+  @keyframes announce-pulse{
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .announce-badge{ animation: none; }
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    display:grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items:stretch;
+    border-bottom: 1px solid var(--line);
+  }
+  .hero-copy{
+    padding: 96px 56px 72px 32px;
+    display:flex; flex-direction:column; justify-content:center;
+    max-width: 620px;
+  }
+  .hero-noimg{
+    grid-template-columns: 1fr;
+    justify-items:center;
+    text-align:center;
+    padding: 0 32px;
+  }
+  .hero-noimg .hero-copy{
+    max-width: 960px;
+    padding: 88px 48px 72px;
+    margin: 64px 0;
+    align-items:center;
+    background: rgba(250,250,245,0.88);
+    backdrop-filter: blur(10px) saturate(1.05);
+    border-radius: 4px;
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--gold);
+    box-shadow: 0 30px 70px -35px rgba(29,43,38,0.4);
+  }
+  .hero-noimg .hero-actions{ justify-content:center; }
+  .hero-noimg .eyebrow{ justify-content:center; color: var(--deepblue); }
+  .hero-noimg .eyebrow::before{ display:none; }
+  .hero-bg{
+    background-size: cover;
+    background-position: center 28%;
+    background-repeat: no-repeat;
+  }
+  .hero-name{
+    font-family:'Fraunces', serif;
+    font-size: clamp(2.6rem, 5vw, 4.2rem);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--pine);
+    margin-bottom: 20px;
+    line-height: 1.05;
+  }
+  .hero-subname{
+    font-family:'Fraunces', serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: clamp(1.15rem, 2vw, 1.5rem);
+    color: var(--deepblue);
+    margin: -10px 0 22px;
+    letter-spacing: 0.005em;
+  }
+  .hero-copy h1{
+    font-size: clamp(2.4rem, 4vw, 3.5rem);
+    margin: 18px 0 22px;
+  }
+  .tagline{
+    font-family:'Fraunces', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 19px;
+    color: var(--gold);
+    margin: -6px 0 24px;
+    letter-spacing: 0.005em;
+  }
+  .hero-copy h1 em{
+    font-style:italic;
+    color: var(--gold);
+  }
+  .hero-copy p{
+    font-size: 18px;
+    color: var(--ink-soft);
+    max-width: 480px;
+    margin-bottom: 34px;
+  }
+  .hero-noimg .hero-copy p{
+    max-width: 720px;
+  }
+  .hero-actions{display:flex; gap:14px; flex-wrap:wrap;}
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    padding: 13px 24px;
+    font-size:14.5px;
+    font-weight:600;
+    text-decoration:none;
+    border-radius:2px;
+    letter-spacing:0.01em;
+    transition: all .15s ease;
+  }
+  .btn-primary{ background:var(--pine); color:var(--white); }
+  .btn-primary:hover{ background: var(--pine-light); }
+  .btn-ghost{ background:transparent; color:var(--pine); border:1px solid var(--pine); }
+  .btn-ghost:hover{ background: var(--pine); color:var(--white); }
+
+  .hero-photo{
+    position:relative;
+    overflow:hidden;
+    min-height: 460px;
+  }
+  .hero-photo img{
+    width:100%; height:100%; object-fit:cover;
+    position:absolute; inset:0;
+  }
+  .hero-photo-tag{
+    position:absolute; left:0; bottom:0;
+    background: var(--pine);
+    color: var(--white);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px;
+    letter-spacing:0.08em;
+    padding: 10px 16px;
+  }
+  .hero-roster{
+    position:absolute; top:0; right:0;
+    max-width: 78%;
+    background: rgba(29,43,38,0.86);
+    backdrop-filter: blur(2px);
+    padding: 20px 22px 18px;
+  }
+  .hero-roster .eyebrow{
+    color: var(--gold-light);
+    margin-bottom: 12px;
+  }
+  .hero-roster .eyebrow::before{ background: var(--gold-light); }
+  .hero-roster ul{
+    list-style:none;
+    columns: 2;
+    column-gap: 20px;
+  }
+  .hero-roster li{
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 11.5px;
+    letter-spacing:0.02em;
+    color: var(--paper);
+    padding: 3px 0;
+    break-inside: avoid;
+    white-space: nowrap;
+  }
+  @media (max-width:900px){
+    .hero-roster{ max-width:100%; position:static; }
+    .hero-roster ul{ columns:2; }
+  }
+
+  @media (max-width:900px){
+    .hero{grid-template-columns:1fr;}
+    .hero-copy{padding:56px 24px 40px; max-width:none;}
+    .hero-photo{min-height:320px;}
+  }
+
+  /* ---------- STAT / FACT STRIP ---------- */
+  .factstrip{
+    background: var(--pine);
+    color: var(--paper);
+  }
+  .factstrip .wrap{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 30px 32px;
+  }
+  .fact{
+    padding: 0 22px;
+    border-left: 1px solid rgba(241,243,236,0.22);
+  }
+  .fact:first-child{border-left:none; padding-left:0;}
+  .fact .num{
+    font-family:'Fraunces', serif;
+    font-size: 30px;
+    font-weight:600;
+    color: var(--gold-light);
+    display:block;
+  }
+  .fact .lbl{
+    font-size: 13px;
+    color: rgba(241,243,236,0.82);
+    margin-top:4px;
+  }
+  @media (max-width:800px){
+    .factstrip .wrap{grid-template-columns:1fr 1fr; row-gap:24px;}
+    .fact:nth-child(3){border-left:none;}
+  }
+
+  /* ---------- SECTION GENERIC ---------- */
+  section{padding: 92px 0;}
+  .section-head{
+    max-width: 640px;
+    margin-bottom: 52px;
+  }
+  .section-head h2{
+    font-size: clamp(1.9rem, 3vw, 2.5rem);
+    margin-top:14px;
+  }
+  .section-head p{
+    color: var(--ink-soft);
+    margin-top:16px;
+    font-size:17px;
+  }
+  .alt{ background: var(--paper-deep); }
+
+  /* ---------- ABOUT / TIMELINE (directory-board motif) ---------- */
+  .timeline{
+    border-top: 1px solid var(--line);
+  }
+  .tl-row{
+    display:grid;
+    grid-template-columns: 120px 1fr;
+    gap: 28px;
+    padding: 26px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .tl-year{
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 15px;
+    font-weight:600;
+    color: var(--gold);
+    padding-top:2px;
+  }
+  .tl-body h4{
+    font-family:'Source Sans 3', sans-serif;
+    font-weight:700;
+    color: var(--ink);
+    font-size:17px;
+    margin-bottom:6px;
+  }
+  .tl-body p{ color: var(--ink-soft); font-size:15.5px; max-width:640px;}
+
+  .about-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items:start;
+  }
+  #about .section-head p,
+  #about .about-grid > div:first-child > p{
+    color: #000000 !important;
+  }
+  @media (max-width: 900px){
+    .about-grid{grid-template-columns:1fr;}
+    .tl-row{grid-template-columns:80px 1fr;}
+  }
+
+  /* ---------- MISSION / PULLQUOTE ---------- */
+  .mission{
+    background: var(--pine);
+    color: var(--paper);
+    padding: 110px 0;
+    position:relative;
+  }
+  .mission .wrap{ max-width: 880px; }
+  .mission .eyebrow{color: var(--gold-light);}
+  .mission .eyebrow::before{background:var(--gold-light);}
+  .mission blockquote{
+    font-family:'Fraunces', serif;
+    font-weight:400;
+    font-style:italic;
+    font-size: clamp(1.6rem, 3vw, 2.35rem);
+    line-height:1.42;
+    margin-top: 28px;
+    color: var(--white);
+  }
+  .mission cite{
+    display:block;
+    margin-top:36px;
+    font-style:normal;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color: var(--gold-light);
+  }
+
+  /* ---------- SERVICES ---------- */
+  .services-grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+  .svc{
+    background: var(--card);
+    padding: 40px 32px;
+  }
+  .svc .eyebrow{ margin-bottom: 18px; }
+  .svc h3{ font-size: 22px; margin-bottom: 12px; }
+  .svc p{ color: var(--ink-soft); font-size:15.5px; }
+  .svc ul{ margin-top:16px; padding-left:18px; color:var(--ink-soft); font-size:15px;}
+  .svc ul li{margin-bottom:6px;}
+  @media (max-width:900px){ .services-grid{grid-template-columns:1fr;} }
+
+  .svc-list{
+    margin-top: 1px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-top: none;
+    padding: 40px 32px 44px;
+  }
+  .svc-list .eyebrow{ margin-bottom: 16px; }
+  .svc-list h3{ font-size: 20px; margin-bottom: 22px; }
+  .svc-tags{
+    display:flex; flex-wrap:wrap; gap: 10px;
+  }
+  .svc-tags span{
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 12.5px;
+    color: var(--pine);
+    background: var(--pine-pale);
+    border: 1px solid var(--line);
+    padding: 7px 13px;
+    letter-spacing:0.01em;
+    white-space: nowrap;
+  }
+
+  /* ---------- LOCATIONS / DIRECTORY BOARD ---------- */
+  .locations-top{
+    display:grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+    margin-bottom: 56px;
+  }
+  .loc-photo{
+    position:relative;
+    aspect-ratio: 4/3;
+    overflow:hidden;
+    border: 1px solid var(--line);
+  }
+  .loc-photo img{width:100%; height:100%; object-fit:cover;}
+  .loc-photo span{
+    position:absolute; left:0; bottom:0;
+    background: rgba(29,43,38,0.82);
+    color: var(--paper);
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing:0.06em;
+    padding: 8px 12px;
+  }
+  @media (max-width:1000px){ .locations-top{grid-template-columns: repeat(3,1fr);} }
+  @media (max-width:800px){ .locations-top{grid-template-columns:1fr 1fr;} }
+  @media (max-width:480px){ .locations-top{grid-template-columns:1fr;} }
+
+  .directory{
+    border-top: 2px solid var(--pine);
+    padding-top: 8px;
+  }
+  .loc-card{
+    display:grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 0;
+    border-bottom: 1px solid var(--line);
+    padding: 36px 0;
+  }
+  .loc-info{ padding-right: 40px; }
+  .loc-info .campus{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+    display:block;
+  }
+  .loc-info h3{
+    font-size: 21px;
+    margin-bottom: 14px;
+  }
+  .loc-addr{
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    line-height:1.8;
+    margin-bottom: 18px;
+  }
+  .loc-addr strong{ color:var(--ink); display:block; font-size:14px; margin-bottom:2px; }
+  #locations .phone{
+    color: #000000;
+    font-weight: 700;
+    font-size: 1.25em;
+  }
+  .loc-hours{
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 12.5px;
+    color: var(--pine);
+    background: var(--pine-pale);
+    display:inline-block;
+    padding: 5px 11px;
+    margin-bottom: 18px;
+    letter-spacing:0.02em;
+  }
+  .loc-groups{ margin-bottom: 18px; }
+  .loc-groups .grp{ margin-bottom: 12px; }
+  .loc-groups .grp-name{
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 15.5px;
+    font-weight: 700;
+    letter-spacing:0.025em;
+    text-transform:none;
+    color: #000;
+    margin-bottom: 6px;
+  }
+  .loc-groups .grp-name .phone{
+    font-size: 1em;
+    font-weight: 700;
+  }
+  .loc-groups .grp-people{ font-size:15px; color: var(--ink); }
+  .loc-groups .grp-people span{ display:block; padding:1px 0; }
+  .loc-actions{ display:flex; gap:12px; flex-wrap:wrap; }
+  .loc-actions a{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    letter-spacing:0.04em;
+    color: var(--pine);
+    text-decoration:none;
+    border:1px solid var(--pine);
+    padding: 9px 16px;
+  }
+  .loc-actions a:hover{ background:var(--pine); color:var(--white); }
+  .loc-map{
+    border: 1px solid var(--line);
+    min-height: 260px;
+    background: var(--paper-deep);
+  }
+  .loc-map iframe{
+    width:100%; height:100%; min-height:260px;
+    border:0; display:block;
+    filter: grayscale(15%) contrast(1.02);
+  }
+  @media (max-width:860px){
+    .loc-card{ grid-template-columns: 1fr; gap:22px; }
+    .loc-info{ padding-right:0; }
+  }
+
+  /* ---------- PROVIDERS ---------- */
+  .providers-grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  @media (max-width:960px){ .providers-grid{grid-template-columns: repeat(2,1fr);} }
+  @media (max-width:620px){ .providers-grid{grid-template-columns: 1fr;} }
+
+  .provider-card{
+    background: var(--card);
+    border: 1px solid var(--line);
+  }
+  .provider-photo{
+    aspect-ratio: 4/4.6;
+    overflow:hidden;
+    background: var(--pine-pale);
+  }
+  .provider-photo img{width:100%; height:100%; object-fit:cover;}
+  .provider-info{ padding: 20px 22px 24px; }
+  .provider-info h4{
+    font-family:'Source Sans 3',sans-serif;
+    font-weight:700;
+    font-size: 17px;
+    color: var(--ink);
+  }
+  .provider-info .spec{
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    color: var(--deepblue);
+    margin-top:4px;
+  }
+  .npat{
+    display:inline-block;
+    margin-top:10px;
+    font-size:11.5px;
+    font-weight:600;
+    color: var(--pine);
+    background: var(--pine-pale);
+    padding: 3px 9px;
+    border-radius:2px;
+  }
+  .provider-info details{ margin-top:14px; }
+  .provider-info summary{
+    cursor:pointer;
+    font-size:13.5px;
+    font-weight:600;
+    color: var(--pine);
+    list-style:none;
+    display:flex;
+    align-items:center;
+    gap:6px;
+  }
+  .provider-info summary::-webkit-details-marker{display:none;}
+  .provider-info summary::after{
+    content:"+";
+    font-family:'IBM Plex Mono', monospace;
+    font-weight:600;
+  }
+  .provider-info details[open] summary::after{content:"–";}
+  .provider-info .bio{
+    margin-top:12px;
+    font-size:14px;
+    color: var(--ink-soft);
+    line-height:1.65;
+  }
+  .provider-info .bio p{margin-bottom:10px;}
+
+  /* ---------- PATIENT INFO ---------- */
+  .welcome-banner{
+    display:flex;
+    align-items:center;
+    gap: 16px;
+    background: var(--pine-pale);
+    border-left: 4px solid var(--gold);
+    padding: 20px 26px;
+    margin-bottom: 40px;
+  }
+  .welcome-banner .wb-check{
+    width: 30px; height:30px;
+    flex: 0 0 30px;
+    border-radius: 50%;
+    background: var(--pine);
+    color: var(--white);
+    display:flex; align-items:center; justify-content:center;
+    font-size: 14px;
+    font-weight:700;
+  }
+  .welcome-banner p{
+    font-size: 15.5px;
+    color: var(--ink);
+  }
+  .welcome-banner strong{ color: var(--pine); }
+
+  .checklist{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--line);
+    border:1px solid var(--line);
+  }
+  .check-item{
+    background: var(--card);
+    padding: 34px;
+  }
+  .check-item .eyebrow{margin-bottom:14px;}
+  .check-item h3{font-size:19px; margin-bottom:10px;}
+  .check-item p, .check-item li{color:var(--ink-soft); font-size:15px;}
+  .check-item ul{padding-left:18px; margin-top:8px;}
+  .check-item li{margin-bottom:6px;}
+  @media (max-width:800px){ .checklist{grid-template-columns:1fr;} }
+
+  .portal-cta{
+    margin-top: 56px;
+    background: var(--pine);
+    color: var(--paper);
+    padding: 44px 48px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap: 24px;
+    flex-wrap:wrap;
+  }
+  .portal-cta h3{ color:var(--white); font-size:22px; margin-bottom:6px;}
+  .portal-cta p{ color: rgba(241,243,236,0.82); font-size:14.5px; max-width:420px;}
+  .portal-cta .btn-primary{ background: var(--gold); }
+  .portal-cta .btn-primary:hover{ background: var(--gold-light); }
+
+  /* ---------- HEALTH LIBRARY ---------- */
+  .cat-strip{
+    padding: 28px 0;
+    border-bottom: 1px solid var(--line);
+    background: var(--paper-deep);
+  }
+  .cat-strip .wrap{
+    display:flex; flex-wrap:wrap; gap:10px;
+  }
+  .cat-strip span{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    color: var(--pine);
+    background: var(--card);
+    border:1px solid var(--line);
+    padding: 7px 14px;
+  }
+  .articles-grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  @media (max-width:960px){ .articles-grid{grid-template-columns: repeat(2,1fr);} }
+  @media (max-width:640px){ .articles-grid{grid-template-columns: 1fr;} }
+  .article-card{
+    background: var(--card);
+    border: 1px solid var(--line);
+    display:flex;
+    flex-direction:column;
+  }
+  .article-card .tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color: var(--gold);
+    padding: 22px 24px 0;
+  }
+  .article-card h3{
+    font-size: 20px;
+    padding: 10px 24px 0;
+  }
+  .article-card .excerpt{
+    color: var(--ink-soft);
+    font-size: 15px;
+    padding: 12px 24px 0;
+    flex-grow:1;
+  }
+  .article-card details{ padding: 16px 24px 24px; }
+  .article-card summary{
+    cursor:pointer;
+    font-size:13.5px;
+    font-weight:600;
+    color: var(--pine);
+    list-style:none;
+    display:flex;
+    align-items:center;
+    gap:6px;
+  }
+  .article-card summary::-webkit-details-marker{display:none;}
+  .article-card summary::after{
+    content:"+";
+    font-family:'IBM Plex Mono', monospace;
+    font-weight:600;
+  }
+  .article-card details[open] summary::after{content:"\2013";}
+  .article-card .full{
+    margin-top:12px;
+    font-size:14px;
+    color: var(--ink-soft);
+    line-height:1.7;
+  }
+  .article-card .full p{ margin-bottom:10px; }
+  .disclaimer{
+    background: var(--pine);
+    color: var(--paper);
+    padding: 48px 0;
+  }
+  .disclaimer .wrap{ max-width: 760px; }
+  .disclaimer .eyebrow{ color:var(--gold-light); margin-bottom:14px; }
+  .disclaimer .eyebrow::before{ background:var(--gold-light); }
+  .disclaimer p{ font-size:15px; color: rgba(241,243,236,0.85); line-height:1.7; }
+
+  /* ---------- NEWS / BLOG ---------- */
+  .news-grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  @media (max-width:960px){ .news-grid{grid-template-columns: repeat(2,1fr);} }
+  @media (max-width:640px){ .news-grid{grid-template-columns: 1fr;} }
+  .post-card{
+    background: var(--card);
+    border: 1px solid var(--line);
+    display:flex;
+    flex-direction:column;
+  }
+  .post-card .post-date{
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color: var(--ink-soft);
+    padding: 22px 24px 0;
+  }
+  .post-card .tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color: var(--gold);
+    padding: 6px 24px 0;
+  }
+  .post-card h3{
+    font-size: 20px;
+    padding: 10px 24px 0;
+  }
+  .post-card .excerpt{
+    color: var(--ink-soft);
+    font-size: 15px;
+    padding: 12px 24px 0;
+    flex-grow:1;
+  }
+  .post-card details{ padding: 16px 24px 24px; }
+  .post-card summary{
+    cursor:pointer;
+    font-size:13.5px;
+    font-weight:600;
+    color: var(--pine);
+    list-style:none;
+    display:flex;
+    align-items:center;
+    gap:6px;
+  }
+  .post-card summary::-webkit-details-marker{display:none;}
+  .post-card summary::after{
+    content:"+";
+    font-family:'IBM Plex Mono', monospace;
+    font-weight:600;
+  }
+  .post-card details[open] summary::after{content:"\2013";}
+  .post-card .full{
+    margin-top:12px;
+    font-size:14px;
+    color: var(--ink-soft);
+    line-height:1.7;
+  }
+  .post-card .full p{ margin-bottom:10px; }
+
+
+  /* ---------- FOCUS ON: TIMELY HEALTH TOPICS ---------- */
+  .focus-on{
+    background: linear-gradient(180deg, #EAF3F8 0%, var(--paper) 100%);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .focus-hero{
+    display:grid;
+    grid-template-columns: 1.25fr .75fr;
+    gap: 42px;
+    align-items:start;
+    margin-bottom: 34px;
+  }
+  .focus-hero h2{
+    font-size: clamp(2.15rem, 4vw, 3.35rem);
+    margin: 14px 0 18px;
+  }
+  .focus-lead{
+    color:#111;
+    font-size:18px;
+    max-width:760px;
+  }
+  .focus-alert{
+    background:var(--deepblue);
+    color:var(--white);
+    padding:28px;
+    border-radius:3px;
+    box-shadow:0 10px 30px rgba(27,58,92,.12);
+  }
+  .focus-alert .label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:#BFDCEB;
+    display:block;
+    margin-bottom:10px;
+  }
+  .focus-alert strong{
+    font-family:'Fraunces', serif;
+    font-size:25px;
+    line-height:1.25;
+    display:block;
+    margin-bottom:12px;
+  }
+  .focus-alert p{font-size:15px;color:rgba(255,255,255,.86);}
+  .focus-meta{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin:20px 0 32px;
+  }
+  .focus-meta span{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    font-weight:600;
+    color:var(--deepblue);
+    background:#D7EAF4;
+    border:1px solid #B8D5E4;
+    padding:7px 12px;
+  }
+  .focus-panel{
+    background:var(--card);
+    border:1px solid var(--line);
+    padding:34px;
+    margin-top:22px;
+  }
+  .focus-panel h3{
+    font-size:24px;
+    margin-bottom:16px;
+  }
+  .focus-panel p,
+  .focus-panel li{
+    color:#111;
+    font-size:16px;
+  }
+  .focus-panel ul,
+  .focus-panel ol{
+    padding-left:22px;
+    margin-top:12px;
+  }
+  .focus-panel li{margin-bottom:9px;}
+  .protect-grid,
+  .disease-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+    margin-top:20px;
+  }
+  .protect-card,
+  .disease-card{
+    background:var(--card);
+    border:1px solid var(--line);
+    padding:26px;
+  }
+  .protect-card h4,
+  .disease-card h4{
+    font-family:'Source Sans 3',sans-serif;
+    font-size:18px;
+    font-weight:800;
+    color:var(--deepblue);
+    margin-bottom:9px;
+  }
+  .protect-card p,
+  .disease-card p{
+    color:#111;
+    font-size:15px;
+  }
+  .disease-card .tick-label{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--gold);
+    display:block;
+    margin-bottom:8px;
+  }
+  .warning-box{
+    background:#FFF4D8;
+    border-left:5px solid var(--gold);
+    padding:25px 28px;
+    margin-top:22px;
+  }
+  .warning-box h3{
+    font-family:'Source Sans 3',sans-serif;
+    font-size:20px;
+    font-weight:800;
+    color:#111;
+    margin-bottom:8px;
+  }
+  .warning-box p{color:#111;}
+  .source-note{
+    font-size:13px;
+    color:var(--ink-soft);
+    margin-top:28px;
+    border-top:1px solid var(--line);
+    padding-top:18px;
+  }
+  .source-note a{color:var(--deepblue);font-weight:700;}
+  @media(max-width:900px){
+    .focus-hero{grid-template-columns:1fr;}
+  }
+  @media(max-width:700px){
+    .protect-grid,.disease-grid{grid-template-columns:1fr;}
+    .focus-panel,.protect-card,.disease-card{padding:24px 20px;}
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    background: var(--ink);
+    color: var(--paper);
+    padding: 64px 0 28px;
+  }
+  .foot-grid{
+    display:grid;
+    grid-template-columns: 1.3fr 1fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 44px;
+    border-bottom: 1px solid rgba(241,243,236,0.14);
+  }
+  .foot-brand{
+    font-family:'Fraunces', serif;
+    font-size:22px;
+    font-weight:600;
+    color: var(--white);
+    margin-bottom:14px;
+  }
+  footer p, footer a{ color: rgba(241,243,236,0.68); font-size:14px; line-height:1.8; text-decoration:none;}
+  footer h5{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color: var(--gold-light);
+    margin-bottom:14px;
+  }
+  .foot-bottom{
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
+    padding-top: 24px;
+    font-size:12.5px;
+    color: rgba(241,243,236,0.45);
+  }
+  .foot-affiliations{
+    padding: 28px 0;
+    border-bottom: 1px solid rgba(241,243,236,0.14);
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap: 14px 22px;
+  }
+  .foot-affiliations h5{ margin-bottom:0; }
+  .foot-affiliations a{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px;
+    letter-spacing:0.04em;
+    color: rgba(241,243,236,0.6);
+    border-bottom: 1px solid rgba(241,243,236,0.22);
+    padding-bottom:2px;
+  }
+  .foot-affiliations a:hover{ color: var(--gold-light); border-color: var(--gold-light); }
+  @media (max-width:800px){ .foot-grid{grid-template-columns:1fr 1fr;} }
+
+
+  /* ---------- ACCESSIBILITY & INTERACTION POLISH ---------- */
+  .skip-link{
+    position:fixed; left:16px; top:-80px; z-index:1000;
+    background:var(--white); color:var(--pine); border:2px solid var(--pine);
+    padding:10px 14px; font-weight:700; text-decoration:none;
+    transition:top .15s ease;
+  }
+  .skip-link:focus{top:16px;}
+  :focus-visible{outline:3px solid var(--gold-light); outline-offset:3px;}
+  a, button{touch-action:manipulation;}
+  .btn, .nav-cta, .loc-actions a{min-height:44px; justify-content:center;}
+  .nav-toggle{cursor:pointer; min-width:44px; min-height:44px;}
+  .nav-toggle span{display:block; width:20px; height:2px; background:currentColor; margin:4px auto;}
+  @media (max-width:900px){
+    .nav-inner{position:relative;}
+    nav{margin-left:auto;}
+    nav ul.is-open{
+      display:flex; position:absolute; top:100%; left:0; right:0;
+      flex-direction:column; gap:0; padding:10px 24px 20px;
+      background:var(--paper); border-bottom:1px solid var(--line);
+      box-shadow:0 12px 24px rgba(29,43,38,.12);
+    }
+    nav ul.is-open li{border-bottom:1px solid var(--line);}
+    nav ul.is-open li:last-child{border-bottom:0; padding-top:10px;}
+    nav ul.is-open a{display:block; padding:12px 2px; font-size:16px;}
+    nav ul.is-open .nav-cta{text-align:center; padding:12px 18px;}
+  }
+  @media (max-width:560px){
+    .wrap{padding-left:20px; padding-right:20px;}
+    .nav-inner{padding:13px 20px;}
+    .brand{font-size:18px; max-width:245px;}
+    .hero-noimg{padding:0 16px;}
+    .hero-noimg .hero-copy{padding:70px 20px 58px;}
+    .hero-name{font-size:clamp(2.2rem,11vw,3rem);}
+    section{padding:68px 0;}
+    .factstrip .wrap{grid-template-columns:1fr; gap:0; padding:12px 20px;}
+    .fact,.fact:first-child,.fact:nth-child(3){border-left:0; border-bottom:1px solid rgba(241,243,236,.18); padding:18px 0;}
+    .fact:last-child{border-bottom:0;}
+    .portal-cta{padding:32px 24px;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *,*::before,*::after{animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important;}
+  }
+
+
+  /* Timeline text color override */
+  #about .timeline,
+  #about .timeline .tl-year,
+  #about .timeline .tl-body h4,
+  #about .timeline .tl-body p{
+    color:#000000 !important;
+  }
+
+  /* Explicit sizing for practice labels and their phone numbers */
+  #locations .loc-groups .grp-name {
+    font-size: 17px !important;
+    font-weight: 800 !important;
+    line-height: 1.45 !important;
+    color: #000000 !important;
+    text-transform: none !important;
+  }
+  #locations .loc-groups .grp-name,
+  #locations .loc-groups .grp-name a,
+  #locations .loc-groups .grp-name .phone {
+    font-size: 17px !important;
+    font-weight: 800 !important;
+    color: #000000 !important;
+  }
+
+  /* Hours styling refinement */
+  #locations .loc-hours{
+    font-family: 'Source Sans 3', sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.01em !important;
+    color: #1B3A5C !important;
+    background: #DCEEF8 !important;
+    border: 1px solid #BDD8E8 !important;
+    border-radius: 4px !important;
+    padding: 7px 12px !important;
+  }
+
+
+
+  /* ---------- BILLING & PAYMENTS ---------- */
+  #billing{ background: linear-gradient(135deg, #DCEEF7, #EDF5F8); }
+  #billing .billing-intro{ max-width:820px; margin-bottom:36px; }
+  #billing .billing-intro p{ color:#111; font-size:17px; }
+  #billing .billing-phone{
+    margin-top:24px; display:inline-flex; align-items:center; gap:14px;
+    background:var(--deepblue); color:var(--white); padding:15px 22px;
+    text-decoration:none; font-weight:700; border-radius:3px;
+  }
+  #billing .billing-phone span{ font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.06em; text-transform:uppercase; }
+  #billing .billing-phone strong{ font-size:22px; }
+  .billing-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:20px; }
+  .billing-card{ background:var(--card); border:1px solid var(--line); padding:32px; }
+  .billing-card h3{ color:var(--deepblue); font-size:24px; margin-bottom:12px; }
+  .billing-card p{ color:#111; }
+  .billing-card strong{ color:#000; }
+  .billing-wide{ grid-column:1/-1; }
+  .billing-selfpay{ background:var(--pine); }
+  .billing-selfpay h3,.billing-selfpay p,.billing-selfpay strong{ color:var(--white); }
+  .billing-notice{ background:#DCEEF7; border-left:5px solid var(--deepblue); }
+  .billing-actions{ display:flex; gap:14px; flex-wrap:wrap; margin-top:22px; }
+  @media(max-width:760px){
+    .billing-grid{ grid-template-columns:1fr; }
+    .billing-wide{ grid-column:auto; }
+    .billing-card{ padding:25px; }
+    #billing .billing-phone{ align-items:flex-start; flex-direction:column; gap:2px; }
+  }
+
+
+  /* ---------- ELEVATION LAYER ---------- */
+  ::selection{ background: var(--pine-pale); color: var(--pine); }
+  h1,h2,h3,h4{ text-wrap: balance; }
+
+  header{ transition: box-shadow .25s ease; }
+  header.scrolled{ box-shadow: 0 6px 24px rgba(29,43,38,.09); }
+
+  @media (min-width:901px){
+    nav ul a:not(.nav-cta){ position:relative; }
+    nav ul a:not(.nav-cta)::after{
+      content:""; position:absolute; left:0; right:100%; bottom:-6px;
+      height:2px; background: var(--gold); transition: right .25s ease;
+    }
+    nav ul a:not(.nav-cta):hover::after,
+    nav ul a:not(.nav-cta).active::after{ right:0; }
+    nav ul a.active{ color: var(--pine); }
+  }
+
+  .hero-chips{ display:flex; gap:10px; flex-wrap:wrap; justify-content:center; margin-top:28px; }
+  .hero-chips span{
+    font-family:'IBM Plex Mono', monospace; font-size:12px; font-weight:600;
+    letter-spacing:.04em; color:var(--pine);
+    background: rgba(255,255,255,.72); border:1px solid var(--line);
+    padding:7px 14px; border-radius:2px;
+  }
+
+  .svc, .provider-card, .article-card, .post-card, .billing-card,
+  .check-item, .protect-card, .disease-card{
+    transition: transform .22s ease, box-shadow .22s ease;
+  }
+  .svc:hover, .provider-card:hover, .article-card:hover, .post-card:hover,
+  .billing-card:hover, .check-item:hover, .protect-card:hover, .disease-card:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px -16px rgba(29,43,38,.24);
+  }
+  .provider-photo img{ transition: transform .45s ease; }
+  .provider-card:hover .provider-photo img{ transform: scale(1.035); }
+  .loc-photo img{ transition: transform .45s ease; }
+  .loc-photo:hover img{ transform: scale(1.04); }
+  .provider-info summary, .article-card summary, .post-card summary{ transition: color .15s ease; }
+  .provider-info summary:hover, .article-card summary:hover, .post-card summary:hover{ color: var(--gold); }
+
+  .js-reveal{ opacity:0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+  .js-reveal.in{ opacity:1; transform:none; }
+
+  .to-top{
+    position:fixed; right:22px; bottom:22px; z-index:80;
+    width:46px; height:46px; border-radius:2px;
+    background: var(--pine); color: var(--paper);
+    border:1px solid rgba(241,243,236,.25);
+    font-size:18px; line-height:1; cursor:pointer;
+    display:flex; align-items:center; justify-content:center;
+    opacity:0; pointer-events:none; transform: translateY(8px);
+    transition: opacity .25s ease, transform .25s ease, background .15s ease;
+  }
+  .to-top.show{ opacity:1; pointer-events:auto; transform:none; }
+  .to-top:hover{ background: var(--pine-light); }
+
+  @media (prefers-reduced-motion: reduce){
+    .js-reveal{ opacity:1 !important; transform:none !important; }
+    .to-top{ transition:none; }
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header>
+<div class="nav-inner">
+<a aria-label="Central Medical Associates home" class="brand" href="#main-content">Central Medical Associates
+      <span>Primary Care · Addiction Medicine · Mental Health</span>
+<span class="brand-loc">Elizabethtown &amp; Radcliff, KY</span>
+</a>
+<button aria-controls="primary-nav" aria-expanded="false" aria-label="Open navigation menu" class="nav-toggle" type="button">
+<span></span><span></span><span></span>
+</button>
+<nav aria-label="Primary navigation">
+<ul id="primary-nav">
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#locations">Locations</a></li>
+<li><a href="#providers">Clinicians</a></li>
+<li><a href="#health-library">Health Library</a></li>
+<li><a href="#focus-on">Focus On…</a></li>
+<li><a href="#news">News</a></li>
+<li><a href="#patients">Patients</a></li>
+<li><a href="#billing">Billing</a></li>
+<li><a class="nav-cta" href="#locations">Contact</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<aside aria-label="Practice announcement" class="announce-bar">
+<div class="wrap announce-inner">
+<span class="announce-badge">New</span>
+<span class="announce-text">Flu vaccinations will be available beginning August 1 at all CMA locations.</span>
+<a class="announce-link" href="#news">View details →</a>
+</div>
+</aside>
+<main id="main-content">
+<!-- HERO -->
+<div class="hero hero-noimg hero-bg" style="background-image: linear-gradient(180deg, rgba(241,243,236,0.40), rgba(241,243,236,0.86)), url('assets/img/hero.jpg');">
+<div class="hero-copy">
+<div class="hero-name">Central Medical Associates</div>
+<div class="hero-subname">Quality Primary Care</div>
+<div class="eyebrow">Independent &amp; physician-led since 2016</div>
+<h1>Comprehensive care, <em>under one roof</em>, for every generation.</h1>
+<p class="tagline">Patients are central to our mission.</p>
+<p>Central Medical Associates brings primary care, on-site diagnostics and laboratory services, and mental health care together across five Hardin County locations — plus telehealth visits — unbound by outside interests, and driven solely by what's best for our patients.</p>
+<div class="hero-actions">
+<a class="btn btn-primary" href="#providers">Meet Our Clinicians</a>
+<a class="btn btn-ghost" href="#patients">Patient Portal</a>
+</div>
+<div class="hero-chips">
+<span>Accepting new patients</span>
+<span>All insurances accepted</span>
+<span>Telehealth visits available</span>
+</div>
+</div>
+</div>
+<div class="factstrip">
+<div class="wrap">
+<div class="fact"><span class="num">5</span><span class="lbl">Locations — 4 in Elizabethtown, 1 in Radcliff</span></div>
+<div class="fact"><span class="num">12</span><span class="lbl">Physicians &amp; advanced practice clinicians</span></div>
+<div class="fact"><span class="num">2016</span><span class="lbl">Founded through four practices, joined as one</span></div>
+<div class="fact"><span class="num">On-site</span><span class="lbl">Full lab &amp; diagnostic suite</span></div>
+</div>
+</div>
+<!-- ABOUT -->
+<section id="about">
+<div class="wrap">
+<div class="about-grid">
+<div>
+<div class="section-head" style="margin-bottom:28px;">
+<div class="eyebrow">Our story</div>
+<h2>Four practices. One purpose.</h2>
+<p>Central Medical Associates was established in 2016 through the amalgamation of the practices of Dr. Movania, Dr. Ahmed, Dr. Quadri, and Dr. Nasir. The goal was simple: consolidate resources and expand our capabilities to comprehensively serve our patients under one roof.</p>
+</div>
+<p style="color:var(--ink-soft); font-size:15.5px; max-width:520px;">While changes in the clinical landscape have since led us to step away from rehabilitation and radiology services, our commitment to comprehensive care remains. Today, alongside dedicated primary care, we continue to offer robust diagnostic and laboratory services — and we're proud to have recently expanded into mental health care.</p>
+</div>
+<div class="timeline">
+<div class="tl-row">
+<div class="tl-year">2016</div>
+<div class="tl-body">
+<h4>Central Medical Associates is founded</h4>
+<p>Drs. Movania, Ahmed, Quadri, and Nasir combine their independent practices into one group, consolidating resources to better serve patients.</p>
+</div>
+</div>
+<div class="tl-row">
+<div class="tl-year">Since</div>
+<div class="tl-body">
+<h4>A focus on what matters most</h4>
+<p>As the clinical landscape changed, CMA stepped away from rehabilitation and radiology services to sharpen its focus on primary care and diagnostics.</p>
+</div>
+</div>
+<div class="tl-row">
+<div class="tl-year">Today</div>
+<div class="tl-body">
+<h4>Primary care, labs, and now mental health</h4>
+<p>CMA offers comprehensive primary care at two locations, a full on-site lab and diagnostic suite in Elizabethtown, and a growing mental health service line.</p>
+</div>
+</div>
+<div class="tl-row" style="border-bottom:none;">
+<div class="tl-year">Recently</div>
+<div class="tl-body">
+<h4>Welcoming new clinicians</h4>
+<p>CMA is honored to have recently welcomed Patricia Williams, APRN — the most experienced Nurse Practitioner in Hardin County — and Kelly Keplinger Page, APRN, to the growing practice.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- MISSION -->
+<div class="mission">
+<div class="wrap">
+<div class="eyebrow">Our mission</div>
+<blockquote>“Central Medical Associates is an independent primary care practice dedicated to serving patients across every generation. Our mission is to provide compassionate, comprehensive care with a specialized focus on managing complex chronic conditions. Unbound by outside interests, our clinical decisions are driven solely by what is best for our patients.”</blockquote>
+<cite>Central Medical Associates — Mission Statement</cite>
+</div>
+</div>
+<!-- SERVICES -->
+<section class="alt" id="services">
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">What we offer</div>
+<h2>Care built around the whole patient.</h2>
+<p>From routine wellness to the ongoing management of complex chronic conditions, our clinicians work as one team across every location.</p>
+</div>
+<div class="services-grid">
+<div class="svc">
+<div class="eyebrow">01 — Primary Care</div>
+<h3>Family &amp; Internal Medicine</h3>
+<p>Comprehensive primary care for patients of every age, from pediatric wellness to geriatric support.</p>
+<ul>
+<li>Annual wellness exams &amp; sports physicals</li>
+<li>Chronic disease management</li>
+<li>Acute &amp; sick visits</li>
+<li>Geriatric &amp; addiction medicine</li>
+<li>Telehealth visits available</li>
+</ul>
+</div>
+<div class="svc">
+<div class="eyebrow">02 — Diagnostics</div>
+<h3>Lab &amp; Diagnostic Suite</h3>
+<p>A full on-site laboratory and diagnostic suite at our Elizabethtown main office, for fast, coordinated results.</p>
+<ul>
+<li>On-site laboratory testing</li>
+<li>Diagnostic imaging support</li>
+<li>Results delivered via patient portal</li>
+</ul>
+</div>
+<div class="svc">
+<div class="eyebrow">03 — New</div>
+<h3>Mental Health Care</h3>
+<p>Compassionate psychiatric and mental health support, integrated with your primary care.</p>
+<ul>
+<li>Psychiatric evaluation</li>
+<li>Ongoing mental health management</li>
+<li>Care coordinated with your primary clinician</li>
+</ul>
+</div>
+</div>
+<div class="svc-list">
+<div class="eyebrow">Full list</div>
+<h3>Services provided</h3>
+<div class="svc-tags">
+<span>Acute care</span>
+<span>Urgent care</span>
+<span>Telehealth visits</span>
+<span>Comprehensive primary care</span>
+<span>Wellness exams</span>
+<span>Cancer screening</span>
+<span>Vaccinations</span>
+<span>Skin biopsies</span>
+<span>Minor surgery</span>
+<span>Diagnostic tests</span>
+<span>Laboratory services</span>
+<span>Chronic care management</span>
+<span>Advanced primary care management</span>
+<span>Remote physiological monitoring</span>
+<span>Management of substance use disorder</span>
+<span>Mental health medication management &amp; counseling</span>
+<span>Medical cannabis evaluation</span>
+<span>Hospital services at Baptist Health Hardin &amp; Encompass Health Hospital</span>
+</div>
+</div>
+</div>
+</section>
+<!-- LOCATIONS -->
+<section id="locations">
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">Find us</div>
+<h2>Five locations, one connected team.</h2>
+<p>We see patients at five locations — four in Elizabethtown and one in Radcliff — plus telehealth visits for patients who can't make it in person.</p>
+</div>
+<div class="welcome-banner">
+<span class="wb-check">i</span>
+<p><strong>For appointments or specific medical concerns, please call your individual location directly</strong> using the numbers below. For non-urgent messages, lab results, or refill requests, use the <a href="#patients" style="color:var(--pine); text-decoration:underline;">Patient Portal</a>.</p>
+</div>
+<div class="locations-top">
+<div class="loc-photo"><img alt="Central Medical Associates — Mujahid Nasir, MD office building" decoding="async" loading="lazy" src="assets/img/locations/cma-nasir.jpg"/><span>CMA — NASIR</span></div>
+<div class="loc-photo"><img alt="CMA clinic building exterior" decoding="async" loading="lazy" src="assets/img/locations/cma-quadri.jpg"/><span>CMA — QUADRI</span></div>
+<div class="loc-photo"><img alt="CMA Ahmed office building exterior" decoding="async" loading="lazy" src="assets/img/locations/cma-ahmed.jpg"/><span>CMA — AHMED</span></div>
+<div class="loc-photo"><img alt="CMA Radcliff office exterior, Movania and Simpson" decoding="async" loading="lazy" src="assets/img/locations/cma-movania.jpg"/><span>CMA — MOVANIA, RADCLIFF</span></div>
+<div class="loc-photo"><img alt="CMA Family Healing and Health building exterior" decoding="async" loading="lazy" src="assets/img/locations/cma-fhh.jpg"/><span>CMA — FHH</span></div>
+</div>
+<div class="directory">
+<div class="loc-card">
+<div class="loc-info">
+<span class="campus">Elizabethtown</span>
+<h3>1311 Ring Road</h3>
+<div class="loc-addr"><strong>1311 Ring Road</strong>Elizabethtown, KY 42701</div>
+<div class="loc-hours">Mon–Fri · 8:00 AM – 5:00 PM</div>
+<div class="loc-groups">
+<div class="grp">
+<div class="grp-name">CMA — Quadri, Suite 105 · <span class="phone"><a aria-label="Call 270‑769‑0892" class="phone" href="tel:+12707690892">270‑769‑0892</a></span></div>
+<div class="grp-people">
+<span>Syed Quadri, MD, FACP</span>
+<span>Beth Morrow, PA-C</span>
+<span>Erica Powell, APRN</span>
+</div>
+</div>
+<div class="grp">
+<div class="grp-name">CMA — Nasir, Suite 101 · <span class="phone"><a aria-label="Call 270‑900‑4555" class="phone" href="tel:+12709004555">270‑900‑4555</a></span></div>
+<div class="grp-people">
+<span>Mujahid Nasir, MD</span>
+</div>
+</div>
+</div>
+<div class="loc-actions">
+<a aria-label="Get Directions → (opens in a new tab)" href="https://www.google.com/maps/dir/?api=1&amp;destination=1311+Ring+Road+Elizabethtown+KY+42701" rel="noopener" target="_blank">Get Directions →</a>
+</div>
+</div>
+<div class="loc-map">
+<iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=1311+Ring+Road+Elizabethtown+KY+42701&amp;output=embed" title="Map to 1311 Ring Road, Elizabethtown, KY"></iframe>
+</div>
+</div>
+<div class="loc-card">
+<div class="loc-info">
+<span class="campus">Elizabethtown</span>
+<h3>1321 Ring Road</h3>
+<div class="loc-addr"><strong>1321 Ring Road</strong>Elizabethtown, KY 42701</div>
+<div class="loc-hours">Mon–Fri · 8:00 AM – 5:00 PM</div>
+<div class="loc-groups">
+<div class="grp">
+<div class="grp-name">CMA — Ahmed, Suite 107 · <span class="phone"><a aria-label="Call 270‑986‑7392" class="phone" href="tel:+12709867392">270‑986‑7392</a></span></div>
+<div class="grp-people">
+<span>Ayaz Ahmed, MD, FACP</span>
+<span>Tanya Revor, APRN</span>
+<span>Carrie Westbrooke, APRN</span>
+</div>
+</div>
+<div class="grp">
+<div class="grp-name">CMA — Psychiatry, Suite 105 · <span class="phone"><a aria-label="Call 270-982-2002" class="phone" href="tel:+12709822002">270-982-2002</a></span></div>
+<div class="grp-people">
+<span>Nancy Allen, PMHNP, FNP</span>
+</div>
+</div>
+<div class="grp">
+<div class="grp-name">CMA — Labs, Suite 105 · <span class="phone"><a aria-label="Call 270‑982‑2027" class="phone" href="tel:+12709822027">270‑982‑2027</a></span></div>
+<div class="grp-people">
+<span>On-site laboratory &amp; diagnostic services</span>
+</div>
+</div>
+</div>
+<div class="loc-actions">
+<a aria-label="Get Directions → (opens in a new tab)" href="https://www.google.com/maps/dir/?api=1&amp;destination=1321+Ring+Road+Elizabethtown+KY+42701" rel="noopener" target="_blank">Get Directions →</a>
+</div>
+</div>
+<div class="loc-map">
+<iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=1321+Ring+Road+Elizabethtown+KY+42701&amp;output=embed" title="Map to 1321 Ring Road, Elizabethtown, KY"></iframe>
+</div>
+</div>
+<div class="loc-card">
+<div class="loc-info">
+<span class="campus">Elizabethtown</span>
+<h3>Family Healing and Health — FHH</h3>
+<div class="loc-addr"><strong>5900 N Dixie Highway</strong>Elizabethtown, KY 42701<br/><span class="phone"><a aria-label="Call 270‑737‑1215" class="phone" href="tel:+12707371215">270‑737‑1215</a></span></div>
+<div class="loc-hours">Mon–Fri · 8:00 AM – 5:00 PM</div>
+<div class="loc-groups">
+<div class="grp">
+<div class="grp-people">
+<span>Patricia Williams, APRN</span>
+<span>Kelly Keplinger‑Page, APRN</span>
+</div>
+</div>
+</div>
+<div class="loc-actions">
+<a aria-label="Get Directions → (opens in a new tab)" href="https://www.google.com/maps/dir/?api=1&amp;destination=5900+N+Dixie+Highway+Elizabethtown+KY+42701" rel="noopener" target="_blank">Get Directions →</a>
+</div>
+</div>
+<div class="loc-map">
+<iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=5900+N+Dixie+Highway+Elizabethtown+KY+42701&amp;output=embed" title="Map to 5900 N Dixie Highway, Elizabethtown, KY"></iframe>
+</div>
+</div>
+<div class="loc-card" style="border-bottom:2px solid var(--pine);">
+<div class="loc-info">
+<span class="campus">Radcliff</span>
+<h3>CMA — Movania</h3>
+<div class="loc-addr"><strong>700 W Lincoln Trail Blvd</strong>Radcliff, KY 40160<br/><span class="phone"><a aria-label="Call 270‑351‑3192" class="phone" href="tel:+12703513192">270‑351‑3192</a></span></div>
+<div class="loc-hours">Mon–Fri · 8:00 AM – 5:00 PM</div>
+<div class="loc-groups">
+<div class="grp">
+<div class="grp-people">
+<span>Jawed Movania, MD</span>
+<span>Anita Simpson, APRN</span>
+</div>
+</div>
+</div>
+<div class="loc-actions">
+<a aria-label="Get Directions → (opens in a new tab)" href="https://www.google.com/maps/dir/?api=1&amp;destination=700+W+Lincoln+Trail+Blvd+Radcliff+KY+40160" rel="noopener" target="_blank">Get Directions →</a>
+</div>
+</div>
+<div class="loc-map">
+<iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=700+W+Lincoln+Trail+Blvd+Radcliff+KY+40160&amp;output=embed" title="Map to 700 W Lincoln Trail Blvd, Radcliff, KY"></iframe>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- PROVIDERS -->
+<section class="alt" id="providers">
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">Our team</div>
+<h2>Meet our physicians &amp; clinicians.</h2>
+<p>Twelve physicians and advanced practice clinicians, sharing decades of combined experience across Hardin County.</p>
+</div>
+<div class="providers-grid">
+<div class="provider-card">
+<div class="provider-photo"><img alt="Syed Quadri, MD, FACP portrait" decoding="async" loading="lazy" src="assets/img/providers/syed-quadri.jpg"/></div>
+<div class="provider-info">
+<h4>Syed Quadri, MD, FACP</h4>
+<div class="spec">Internal Medicine</div>
+<span class="npat">Accepting new patients</span>
+<details>
+<summary>Read full bio</summary>
+<div class="bio"><p>Dr. Syed Quadri has been a dedicated member of the CMA team since 2016, with a career spanning 42 years. He specializes in evaluating and managing complex medical conditions in adult patients.</p><p>He began his medical education at Gulbarga University in India (1984) and completed advanced training in Internal Medicine at Providence Hospital in Southfield, Michigan (1997). He has practiced in Kentucky since 1998.</p><p>Dr. Quadri served as Medical Director of the local free clinic from 2002 until its closing in 2024, and currently serves as President of the Hardin County Medical Society.</p></div>
+</details>
+</div>
+</div>
+<div class="provider-card">
+<div class="provider-photo"><img alt="Beth Morrow, PA-C portrait" decoding="async" loading="lazy" src="assets/img/providers/beth-morrow.jpg"/></div>
+<div class="provider-info">
+<h4>Beth Morrow, PA-C</h4>
+<div class="spec">Internal Medicine</div>
+<span class="npat">Accepting new patients</span>
+<details>
+<summary>Read full bio</summary>
+<div class="bio"><p>Beth Morrow is a Physician Assistant-Certified with 32 years of clinical experience, having joined CMA on February 15, 2018. Her focus is on longitudinal care — the prevention, diagnosis, and treatment of complex and chronic illnesses.</p><p>She graduated from the University of Kentucky in 1993 and has practiced across Pediatrics, Internal Medicine, and Family Practice throughout central Kentucky.</p><p>Beth volunteered at The Free Clinic from 2002 to 2024 and remains active in local charities, horse racing, art, gardening, and time with her children and grandchildren.</p></div>
+</details>
+</div>
+</div>
+<div class="provider-card">
+<div class="provider-photo"><img alt="Erica Powell, APRN portrait" decoding="async" loading="lazy" src="assets/img/providers/erica-powell.jpg"/></div>
+<div class="provider-info">
+<h4>Erica Powell, APRN</h4>
+<div class="spec">Family Practice</div>
+<span class="npat">Accepting new patients</span>
+<details>
+<summary>Read full bio</summary>
+<div class="bio"><p>Originally from Radcliff, Erica Powell served as a Registered Nurse for 19 years before transitioning to advanced practice. She joined CMA in March 2020.</p><p>She holds a Master of Science in Nursing from Chamberlain University (2019) and a Bachelor of Science in Nursing from Kaplan University (2016).</p><p>Erica's practice centers on chronic condition management and women's health — providing a supportive, empowering environment for her patients. She is currently accepting new patients.</p></div>
+</details>
+</div>
+</div>
+<div class="provider-card">
+<div class="provider-photo"><img alt="Mujahid A. Nasir, MD portrait" decoding="async" loading="lazy" src="assets/img/providers/mujahid-nasir.jpg"/></div>
+<div class="provider-info">
+<h4>Mujahid A. Nasir, MD</h4>
+<div class="spec">Family Practice</div>
+<span class="npat">Accepting new patients</span>
+<details>
+<summary>Read full bio</summary>
+<div class="bio"><p>Dr. Mujahid A. Nasir brings approximately 30 years of medical experience to CMA. Originally from Pakistan, he provides comprehensive primary care to patients of all ages.</p><p>He earned his medical degree in 1995 from King Edward Medical College and completed postgraduate training in Family Practice at St. Vincent Mercy Hospital in Toledo, Ohio.</p><p>His focus includes preventive care, chronic disease management (hypertension, diabetes, cholesterol, arthritis), and acute sick visits. He is a member of the American Academy of Family Physicians.</p></div>
+</details>
+</div>
+</div>
+<div class="provider-card">
+<div class="provider-photo"><img alt="Ayaz Ahmed, MD, FACP portrait" decoding="async" loading="lazy" src="assets/img/providers/ayaz-ahmed.jpg"/></div>
+<div class="provider-info">
+<h4>Ayaz Ahmed, MD, FACP</h4>
+<div class="spec">Internal Medicine</div>
+<span class="npat">Accepting new patients</span>
+<details>
+<summary>Read full bio</summary>
+<div class="bio"><p>Dr. Ayaz Ahmed has been a pillar of the Elizabethtown medical community for nearly 30 years, providing a seamless continuum of care between clinic and hospital.</p><p>He has served as Internal Medicine Hospitalist at Baptist Health Hardin since 1996, and chaired the Department of Medicine at Hardin Memorial Hospital in 2004.</p><p>Dr. Ahmed earned his medical degree at Osmania Medical College in Hyderabad, India, and completed his Internal Medicine residency at UPMC Mercy Hospital in Pittsburgh, PA.</p></div>
+</details>
+</div>
+</div>
+<div class="provider-card">
+<div class="provider-photo"><img alt="Tanya Revor, APRN portrait" decoding="async" loading="lazy" src="assets/img/providers/tanya-revor.jpg"/></div>
+<div class="provider-info">
+<h4>Tanya Revor, APRN</h4>
+<div class="spec">Family Practice</div>
+<span class="npat">Accepting new patients</span>
+<details>
+<summary>Read full bio</summary>
+<div class="bio"><p>Tanya Revor joined CMA in September 2018 and brings 20 years of clinical experience, with a focus on chronic condition management and long-term patient relationships.</p><p>Originally from Arvada, Colorado, she earned her Bachelor's degree from the University of Louisville (2007) and her Master's from Eastern Kentucky University (2016).</p><p>Tanya serves as a clinical preceptor for nurse practitioner students each year and volunteers as a fast-pitch softball coach in the local community.</p></div>
+</details>
+</div>
+</div>
+<div class="provider-card">
+<div class="provider-photo"><img alt="Carrie Westbrooke, APRN portrait" decoding="async" loading="lazy" src="assets/img/providers/carrie-westbrook.jpg"/></div>
+<div class="provider-info">
+<h4>Carrie Westbrooke, APRN</h4>
+<div class="spec">Family Practice</div>
+<span class="npat">Accepting new patients</span>
+<details>
+<summary>Read full bio</summary>
+<div class="bio"><p>Carrie Westbrooke is an Advanced Practice Registered Nurse providing family practice care at the CMA — Ahmed location on Ring Road in Elizabethtown.</p></div>
+</details>
+</div>
+</div>
+<div class="provider-card">
+<div class="provider-photo"><img alt="Jawed M. Movania, MD portrait" decoding="async" loading="lazy" src="assets/img/providers/jawed-movania.jpg"/></div>
+<div class="provider-info">
+<h4>Jawed M. Movania, MD</h4>
+<div class="spec">Internal Medicine &amp; Addiction Medicine</div>
+<span class="npat">Accepting new patients</span>
+<details>
+<summary>Read full bio</summary>
+<div class="bio"><p>With over 31 years of clinical experience, Dr. Jawed Movania joined CMA in 2016. Originally from Karachi, Pakistan, he bridges Internal Medicine and Addiction Medicine.</p><p>His practice is specialized in geriatrics, complex chronic conditions, and evidence-based treatment for opioid use disorders. He trained at Baylor College of Medicine (residency) and Dow Medical University (1990).</p><p>From 2002–2024, Dr. Movania volunteered at the local free clinic. Outside the clinic he enjoys gardening and fishkeeping.</p></div>
+</details>
+</div>
+</div>
+<div class="provider-card">
+<div class="provider-photo"><img alt="Anita F. Simpson, APRN portrait" decoding="async" loading="lazy" src="assets/img/providers/anita-simpson.jpg"/></div>
+<div class="provider-info">
+<h4>Anita F. Simpson, APRN</h4>
+<div class="spec">Family Practice</div>
+<span class="npat">Accepting new patients</span>
+<details>
+<summary>Read full bio</summary>
+<div class="bio"><p>Originally from Louisiana, Anita Simpson served as a Registered Nurse for 20 years before advancing her practice. She joined CMA in August 2021 with 25 years of total nursing experience.</p><p>She holds a Master of Science in Nursing from Herzing University &amp; Chamberlain University (2022) and has been board certified since 2021.</p><p>Anita volunteers at the local Food Bank and is deeply involved with the NAACP and the Boys &amp; Girls Club. She is currently accepting new patients.</p></div>
+</details>
+</div>
+</div>
+<div class="provider-card">
+<div class="provider-photo"><img alt="Patricia K. Williams, APRN portrait" decoding="async" loading="lazy" src="assets/img/providers/patricia-williams.jpg"/></div>
+<div class="provider-info">
+<h4>Patricia K. Williams, APRN</h4>
+<div class="spec">Family Practice</div>
+<span class="npat">Accepting new patients</span>
+<details>
+<summary>Read full bio</summary>
+<div class="bio"><p>With 30 years of dedicated service, Patricia Williams is recognized as the most experienced Nurse Practitioner in Hardin County. She recently joined CMA after over a decade in independent practice.</p><p>Patricia has collaborated with local physicians including Dr. Faulkner and Dr. Movania, and holds an MSN from Spalding University (1996).</p><p>Her practice reflects a whole-person, holistic philosophy, treating multiple generations of the same families over three decades.</p></div>
+</details>
+</div>
+</div>
+<div class="provider-card">
+<div class="provider-photo"><img alt="Kelly Keplinger Page, APRN portrait" decoding="async" loading="lazy" src="assets/img/providers/kelly-keplinger-page.jpg"/></div>
+<div class="provider-info">
+<h4>Kelly Keplinger Page, APRN</h4>
+<div class="spec">Family Practice</div>
+<span class="npat">Accepting new patients</span>
+<details>
+<summary>Read full bio</summary>
+<div class="bio"><p>An Elizabethtown native, Kelly Keplinger Page joined CMA in 2026 with 13 years of experience as a board-certified APRN, shaped by work in Rural Health Clinics and Urgent Care.</p><p>She earned her MSN from Western Kentucky University (2013) and provides continuous care across the full age spectrum, from pediatric wellness to geriatric support.</p><p>“Being able to serve the families in my home community is a privilege. I believe in providing care that is as compassionate as it is comprehensive.”</p></div>
+</details>
+</div>
+</div>
+<div class="provider-card">
+<div class="provider-photo"><img alt="Nancy Allen, PMHNP, FNP portrait" decoding="async" loading="lazy" src="assets/img/providers/nancy-allen.jpg"/></div>
+<div class="provider-info">
+<h4>Nancy Allen, PMHNP, FNP</h4>
+<div class="spec">Psychiatry &amp; Mental Health</div>
+<span class="npat">Accepting new patients</span>
+<details>
+<summary>Read full bio</summary>
+<div class="bio"><p>Nancy Allen is a dual-certified Nurse Practitioner specializing in Psychiatry and Mental Health, with over 15 years of clinical experience. She has cared for CMA patients since December 2024.</p><p>She earned her Bachelor's degree from the University of Louisville (1999) and her Master's from Graceland University (2011), holding PMHNP-C and FNP-BC certifications.</p><p>Originally from Wilburton, Pennsylvania, Nancy is an active member of the Elks Society and enjoys gardening in her free time.</p></div>
+</details>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- HEALTH LIBRARY -->
+<section class="alt" id="health-library">
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">Patient education</div>
+<h2>Health Library</h2>
+<p>Plain-language guides from our care team on the conditions, services, and preventive care that matter most to our patients — across every generation.</p>
+</div>
+</div>
+<div class="cat-strip">
+<div class="wrap">
+<span>Preventive care</span>
+<span>Chronic conditions</span>
+<span>Mental health</span>
+<span>Vaccines</span>
+<span>Diagnostics</span>
+<span>Addiction medicine</span>
+</div>
+</div>
+<div class="wrap" style="padding-top:56px;">
+<div class="articles-grid">
+<div class="article-card">
+<div class="tag">Preventive care</div>
+<h3>What to Expect at Your Annual Wellness Exam</h3>
+<p class="excerpt">Your yearly wellness visit is one of the most effective tools for catching problems early, before they become harder to treat.</p>
+<details>
+<summary>Read more</summary>
+<div class="full">
+<p>An annual wellness exam gives your clinician a full picture of your health — from blood pressure and weight to bloodwork and age-appropriate cancer screenings. It's also the best time to update your medication list, discuss any new symptoms, and talk through your family history.</p>
+<p>Bring a list of your current medications and any questions you've been meaning to ask. If it's been a while since your last visit, your clinician may recommend catching up on routine labs or screenings during this appointment.</p>
+</div>
+</details>
+</div>
+<div class="article-card">
+<div class="tag">Chronic conditions</div>
+<h3>Living Well With a Chronic Condition</h3>
+<p class="excerpt">Hypertension, diabetes, and high cholesterol are manageable with the right care plan and regular follow-up.</p>
+<details>
+<summary>Read more</summary>
+<div class="full">
+<p>Chronic conditions like high blood pressure, diabetes, and high cholesterol often have no obvious symptoms, which is why regular monitoring matters. Our clinicians work with you to build a long-term plan — combining medication management, lifestyle guidance, and routine labs — rather than treating each visit in isolation.</p>
+<p>Consistency is key. Keeping scheduled follow-ups, taking medications as prescribed, and reporting new symptoms promptly all help keep chronic conditions from progressing.</p>
+</div>
+</details>
+</div>
+<div class="article-card">
+<div class="tag">Vaccines</div>
+<h3>Flu Season: Understanding the High-Dose Vaccine</h3>
+<p class="excerpt">Starting August 1, our clinic offers the high-dose flu vaccine, especially recommended for seniors over 65.</p>
+<details>
+<summary>Read more</summary>
+<div class="full">
+<p>As we age, our immune response to the standard flu vaccine can weaken. The high-dose flu vaccine is formulated to produce a stronger immune response in adults 65 and older, offering better protection during flu season.</p>
+<p>If you've received a flu shot elsewhere — at a pharmacy or workplace clinic — bring your record with you so we can update your chart and avoid duplicate doses.</p>
+</div>
+</details>
+</div>
+<div class="article-card">
+<div class="tag">Vaccines</div>
+<h3>Shingles &amp; RSV: Vaccines Worth Asking About</h3>
+<p class="excerpt">Two vaccines that often get overlooked, but matter a great deal for adults as they age.</p>
+<details>
+<summary>Read more</summary>
+<div class="full">
+<p>Shingles can cause painful, long-lasting nerve pain, and becomes more common with age. RSV, once thought of mainly as a childhood illness, can cause serious respiratory illness in older adults as well.</p>
+<p>Both vaccines are age- and risk-dependent. Ask your clinician at your next visit whether you're due, especially if you're 50 or older or manage a chronic health condition.</p>
+</div>
+</details>
+</div>
+<div class="article-card">
+<div class="tag">Mental health</div>
+<h3>Why We Integrate Mental Health Into Primary Care</h3>
+<p class="excerpt">Mental and physical health are connected — which is why our psychiatric care is coordinated with your primary clinician.</p>
+<details>
+<summary>Read more</summary>
+<div class="full">
+<p>Conditions like depression and anxiety often show up alongside physical symptoms — fatigue, sleep changes, or trouble managing a chronic illness. Having mental health care coordinated with your primary care team means fewer gaps and a more complete picture of your overall health.</p>
+<p>Our psychiatric and mental health clinician works alongside your primary clinician, so your care plan — medications included — stays consistent across every visit.</p>
+</div>
+</details>
+</div>
+<div class="article-card">
+<div class="tag">Diagnostics</div>
+<h3>Skin Checks: What a Biopsy Can (and Can't) Tell You</h3>
+<p class="excerpt">A new or changing spot on your skin is worth mentioning — most are harmless, but a quick check offers peace of mind.</p>
+<details>
+<summary>Read more</summary>
+<div class="full">
+<p>Not every mole or spot needs a biopsy, but any that are new, changing in size or color, or don't heal are worth having a clinician look at. A skin biopsy is a minor, in-office procedure used to examine tissue more closely when something looks uncertain.</p>
+<p>Most biopsy results are benign. Either way, having a spot checked is a simple way to catch something early, when it's most treatable.</p>
+</div>
+</details>
+</div>
+<div class="article-card">
+<div class="tag">Addiction medicine</div>
+<h3>Substance Use Disorder: Compassionate, Judgment-Free Care</h3>
+<p class="excerpt">Recovery is a medical process, not a moral one — and treatment works best when it's part of your ongoing primary care.</p>
+<details>
+<summary>Read more</summary>
+<div class="full">
+<p>Substance use disorder is a chronic medical condition, and treating it well takes the same long-term, judgment-free approach we bring to any other chronic condition. Our addiction medicine care focuses on evidence-based treatment and steady, ongoing support.</p>
+<p>If you or a loved one is struggling, reaching out to your clinician is a confidential first step — treatment plans are built around your specific situation and goals.</p>
+</div>
+</details>
+</div>
+<div class="article-card">
+<div class="tag">Chronic conditions</div>
+<h3>Remote Monitoring: Managing Chronic Care From Home</h3>
+<p class="excerpt">For patients managing ongoing conditions, remote physiological monitoring adds an extra layer of visibility between visits.</p>
+<details>
+<summary>Read more</summary>
+<div class="full">
+<p>Remote physiological monitoring uses at-home devices — like blood pressure cuffs or glucose monitors — to share readings with your care team between office visits. This helps your clinician spot trends early and adjust your care plan without waiting for your next appointment.</p>
+<p>Ask your clinician if remote monitoring is a good fit for the condition you're managing.</p>
+</div>
+</details>
+</div>
+<div class="article-card">
+<div class="tag">Preventive care</div>
+<h3>Urgent Care vs. the ER: Knowing Where to Go</h3>
+<p class="excerpt">Not every health concern needs the emergency room. Knowing the difference can save you time — and money.</p>
+<details>
+<summary>Read more</summary>
+<div class="full">
+<p>Urgent care is the right choice for issues that need same-day attention but aren't life-threatening — minor injuries, infections, or a sudden illness. The emergency room is for serious, potentially life-threatening situations, like chest pain, difficulty breathing, or major injuries.</p>
+<p>When in doubt about a symptom, calling your clinician's office first can help you decide the safest, most appropriate place to be seen.</p>
+</div>
+</details>
+</div>
+</div>
+</div>
+<div class="disclaimer" style="margin-top:56px;">
+<div class="wrap">
+<div class="eyebrow">Please note</div>
+<p>This Health Library is provided for general educational purposes and is not a substitute for professional medical advice, diagnosis, or treatment. Always talk with your Central Medical Associates clinician about questions specific to your health.</p>
+</div>
+</div>
+</section>
+<!-- FOCUS ON -->
+<section aria-labelledby="focus-on-heading" class="focus-on" id="focus-on">
+<div class="wrap">
+<div class="focus-hero">
+<div>
+<div class="eyebrow">Focus On…</div>
+<h2 id="focus-on-heading">Tick Bites: Prevention, Removal &amp; Warning Signs</h2>
+<p class="focus-lead"><strong>Tick activity is a major concern this season.</strong> CDC reported that weekly emergency-department visits for tick bites were higher than usual in 2026. Ticks are generally most active during the warmer months—especially April through September—but exposure can occur at any time of year.</p>
+<div class="focus-meta">
+<span>Updated July 2026</span>
+<span>Seasonal patient guide</span>
+<span>Kentucky &amp; surrounding region</span>
+</div>
+</div>
+<aside aria-label="Important tick bite advice" class="focus-alert">
+<span class="label">Act promptly</span>
+<strong>Remove an attached tick as soon as possible.</strong>
+<p>Then watch for fever, rash, headache, unusual fatigue, muscle or joint pain, or other illness during the following days and weeks.</p>
+</aside>
+</div>
+<div class="focus-panel">
+<h3>How to protect yourself and your family</h3>
+<div class="protect-grid">
+<article class="protect-card">
+<h4>Before going outdoors</h4>
+<p>Use an EPA-registered insect repellent as directed. Treat clothing and gear with products containing 0.5% permethrin, or purchase pretreated clothing. Wear long sleeves, long pants, closed shoes, and light-colored clothing when practical.</p>
+</article>
+<article class="protect-card">
+<h4>Avoid common tick habitats</h4>
+<p>Ticks commonly live in wooded, brushy, grassy, and leaf-covered areas. Walk in the center of trails and avoid brushing against tall grass or dense vegetation.</p>
+</article>
+<article class="protect-card">
+<h4>Check promptly after exposure</h4>
+<p>Check the entire body, including the scalp, hairline, ears, underarms, waist, groin, behind the knees, and between the legs. Carefully inspect children, pets, clothing, backpacks, and outdoor gear.</p>
+</article>
+<article class="protect-card">
+<h4>Shower and handle clothing</h4>
+<p>Shower soon after returning indoors. Tumble-dry clothing on high heat when appropriate; washing alone may not kill ticks. Follow garment-care instructions.</p>
+</article>
+</div>
+</div>
+<div class="focus-panel">
+<h3>How to remove a tick safely</h3>
+<ol>
+<li>Use clean, fine-tipped tweezers.</li>
+<li>Grasp the tick as close to the skin's surface as possible.</li>
+<li>Pull upward with steady, even pressure. Do not twist or jerk.</li>
+<li>Clean the bite area and your hands with soap and water, rubbing alcohol, or hand sanitizer.</li>
+<li>Record the date and likely location of exposure. A clear photograph of the tick may be useful.</li>
+</ol>
+<p style="margin-top:15px;"><strong>Do not</strong> burn the tick, cover it with petroleum jelly or nail polish, or use other methods intended to make it detach. Prompt mechanical removal with tweezers is preferred.</p>
+</div>
+<div class="focus-panel">
+<h3>Illnesses associated with tick bites</h3>
+<div class="disease-grid">
+<article class="disease-card">
+<span class="tick-label">Rocky Mountain spotted fever</span>
+<h4>RMSF</h4>
+<p>May cause fever, severe headache, muscle pain, nausea or vomiting, abdominal pain, and rash. The rash may appear late or may be absent. RMSF can become life-threatening quickly, so early medical evaluation and treatment are critical.</p>
+</article>
+<article class="disease-card">
+<span class="tick-label">Bacterial infection</span>
+<h4>Ehrlichiosis</h4>
+<p>Symptoms often begin within one to two weeks and may include fever, chills, headache, muscle aches, nausea, fatigue, and sometimes rash. Many patients do not remember a tick bite.</p>
+</article>
+<article class="disease-card">
+<span class="tick-label">Blacklegged ticks</span>
+<h4>Lyme disease</h4>
+<p>Possible symptoms include fever, headache, fatigue, muscle or joint pain, swollen lymph nodes, and an expanding rash. The rash does not always look like a classic “bull's-eye,” and some patients have no recognized rash.</p>
+</article>
+<article class="disease-card">
+<span class="tick-label">Delayed allergy</span>
+<h4>Alpha-gal syndrome</h4>
+<p>A tick bite can trigger a potentially serious allergy to alpha-gal, a sugar found in mammalian meat and some mammal-derived products. Reactions may be delayed for several hours after eating and can include hives, swelling, stomach symptoms, breathing difficulty, or anaphylaxis.</p>
+</article>
+</div>
+</div>
+<div class="warning-box">
+<h3>When to contact a clinician</h3>
+<p>Call promptly if you develop fever, rash, severe headache, marked fatigue, muscle or joint pain, facial weakness, palpitations, shortness of breath, or other new illness within days to weeks after a tick bite or after spending time in tick habitat. Tell the clinician when and where the exposure occurred. Seek emergency care for trouble breathing, swelling of the tongue or throat, fainting, confusion, severe weakness, or other signs of a serious allergic reaction or severe illness.</p>
+</div>
+<p class="source-note"><strong>Sources:</strong> U.S. Centers for Disease Control and Prevention guidance on ticks, tick-bite removal, Rocky Mountain spotted fever, ehrlichiosis, Lyme disease, and alpha-gal syndrome. This information is educational and does not replace an individual medical evaluation.</p>
+</div>
+</section>
+<!-- NEWS / BLOG -->
+<section id="news">
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">From our practice</div>
+<h2>News &amp; announcements.</h2>
+<p>What's new at Central Medical Associates — new clinicians, expanded services, and seasonal reminders.</p>
+</div>
+<div class="news-grid">
+<div class="post-card">
+<div class="post-date">2026</div>
+<div class="tag">New clinician</div>
+<h3>Welcoming Kelly Keplinger Page, APRN</h3>
+<p class="excerpt">An Elizabethtown native with 13 years of experience joins our Family Healing and Health (FHH) location.</p>
+<details>
+<summary>Read more</summary>
+<div class="full">
+<p>Central Medical Associates is proud to welcome our newest clinical staff member, Kelly Keplinger Page, APRN. An Elizabethtown native, Kelly brings 13 years of experience — shaped by work in Rural Health Clinics and Urgent Care — back to her hometown.</p>
+<p>Kelly practices Family Medicine at our FHH location, providing continuous care for patients across the entire age spectrum, from pediatric wellness to geriatric support.</p>
+</div>
+</details>
+</div>
+<div class="post-card">
+<div class="post-date">Recent</div>
+<div class="tag">Expanded services</div>
+<h3>Now Offering Mental Health Care</h3>
+<p class="excerpt">CMA has expanded into psychiatry and mental health, coordinated directly with your primary care team.</p>
+<details>
+<summary>Read more</summary>
+<div class="full">
+<p>We're proud to announce our recent expansion into mental health care. Nancy Allen, PMHNP, FNP, a dual-certified nurse practitioner with over 15 years of experience, now provides dedicated psychiatric and mental health care at our Ring Road location.</p>
+<p>Mental health care is coordinated directly with your primary clinician, so your care plan — medications included — stays consistent across every visit.</p>
+</div>
+</details>
+</div>
+<div class="post-card">
+<div class="post-date">Starting Aug 1, 2026</div>
+<div class="tag">Seasonal reminder</div>
+<h3>High-Dose Flu Vaccine Now Available</h3>
+<p class="excerpt">Our clinics begin offering the high-dose seasonal flu vaccine, especially recommended for seniors 65 and older.</p>
+<details>
+<summary>Read more</summary>
+<div class="full">
+<p>Starting August 1, 2026, our clinics will offer seasonal influenza vaccinations, including the high-dose flu vaccine highly recommended for all seniors over the age of 65.</p>
+<p>We also offer the pneumococcal vaccine year-round, and encourage patients to ask about age-appropriate Shingles and RSV vaccinations at their next visit.</p>
+</div>
+</details>
+</div>
+<div class="post-card">
+<div class="post-date">Recent</div>
+<div class="tag">New clinician</div>
+<h3>Patricia Williams, APRN Joins Our Team</h3>
+<p class="excerpt">The most experienced Nurse Practitioner in Hardin County brings 30 years of care to our growing practice.</p>
+<details>
+<summary>Read more</summary>
+<div class="full">
+<p>Central Medical Associates is proud to welcome Patricia K. Williams as the newest addition to our clinical team. With 30 years of dedicated service, Patricia holds the distinction of being the most experienced Nurse Practitioner in Hardin County.</p>
+<p>Patricia specializes in Family Medicine, offering comprehensive, whole-person care for patients of all ages — from K-12 students to seniors.</p>
+</div>
+</details>
+</div>
+<div class="post-card">
+<div class="post-date">Ongoing</div>
+<div class="tag">Practice update</div>
+<h3>All Insurances Accepted — New Patients Welcome</h3>
+<p class="excerpt">A reminder that every CMA location accepts all insurances and is currently welcoming new patients.</p>
+<details>
+<summary>Read more</summary>
+<div class="full">
+<p>Whether you're establishing care for the first time or transferring records from another practice, our team is ready to help. All insurances are accepted, and new patients are always welcome across every CMA location.</p>
+<p>Call your preferred location directly to schedule, or use the Patient Portal for non-urgent requests.</p>
+</div>
+</details>
+</div>
+<div class="post-card">
+<div class="post-date">Reminder</div>
+<div class="tag">Patient portal</div>
+<h3>Sign Up for the HEALOW Patient Portal</h3>
+<p class="excerpt">Review results, message your care team, and request refills securely — all from your phone or computer.</p>
+<details>
+<summary>Read more</summary>
+<div class="full">
+<p>We highly encourage all patients to sign up for HEALOW, our secure patient portal. Through HEALOW, you can review results from labs, imaging, and procedures, communicate directly with your care team, and request medication refills quickly and easily.</p>
+<p>Need help signing up? Ask our front desk staff at your next visit, and we'll be happy to help.</p>
+</div>
+</details>
+</div>
+</div>
+</div>
+</section>
+<!-- BILLING & PAYMENTS -->
+<section aria-labelledby="billing-heading" id="billing">
+<div class="wrap">
+<div class="section-head billing-intro">
+<div class="eyebrow">Patient information</div>
+<h2 id="billing-heading">Billing &amp; Payments</h2>
+<p>Central Medical Associates is committed to making billing and payment arrangements as clear and manageable as possible.</p>
+<a aria-label="Call the Central Medical Associates billing office at 270-982-2015" class="billing-phone" href="tel:+12709822015">
+<span>Billing Office</span><strong>270-982-2015</strong>
+</a>
+</div>
+<div class="billing-grid">
+<article class="billing-card">
+<h3>Copayments and coinsurance</h3>
+<p><strong>Copayments and coinsurance are expected at the time of service.</strong> Please be prepared to pay the amount required by your health plan when you check in.</p>
+</article>
+<article class="billing-card">
+<h3>Where payments may be made</h3>
+<p>Payments may be made at any Central Medical Associates office or through the billing office, either <strong>in person or by telephone</strong>.</p>
+</article>
+<article class="billing-card">
+<h3>Payment plans</h3>
+<p>Payment plans are available for patients with a large outstanding balance who are unable to pay the full amount at one time. Please contact the office to discuss an arrangement.</p>
+</article>
+<article class="billing-card">
+<h3>Financial hardship</h3>
+<p>Charges may be reduced or waived in cases of documented financial hardship. Each request is reviewed by the applicable office on a <strong>case-by-case basis</strong>.</p>
+</article>
+<article class="billing-card billing-wide billing-selfpay">
+<h3>Self-pay discounts</h3>
+<p>Every Central Medical Associates office offers a <strong>self-pay discount</strong> for services furnished by Central Medical Associates. Contact your office before or at the time of service for details.</p>
+</article>
+<article class="billing-card billing-wide billing-notice">
+<h3>Please do not interrupt your medical care</h3>
+<p>Patients who have lost insurance coverage are strongly encouraged to contact the office rather than postpone or discontinue needed care. We will work with you to explore an appropriate arrangement so healthcare can continue to be provided regardless of your immediate ability to pay.</p>
+<div class="billing-actions">
+<a class="btn btn-primary" href="tel:+12709822015">Call 270-982-2015</a>
+<a class="btn btn-ghost" href="#locations">Find an Office</a>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- PATIENTS -->
+<section id="patients">
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">Before your visit</div>
+<h2>Preparing for your office visit.</h2>
+<p>A little preparation helps you get the most out of your time with your clinician.</p>
+</div>
+<div class="welcome-banner">
+<span class="wb-check">✓</span>
+<p><strong>All insurances are accepted</strong> — and new patients are always welcome across every CMA location.</p>
+</div>
+<div class="checklist">
+<div class="check-item">
+<div class="eyebrow">Arrival</div>
+<h3>Arrive early &amp; check in</h3>
+<p>Please arrive 15 minutes before your scheduled appointment to complete check-in. Be prepared to share any recent changes to your phone number, address, email, or insurance coverage at the front desk.</p>
+</div>
+<div class="check-item">
+<div class="eyebrow">Medications</div>
+<h3>Bring your medications</h3>
+<ul>
+<li>All medication bottles — prescriptions, over-the-counter drugs, vitamins, and supplements</li>
+<li>A written list of current medications for your records</li>
+<li>A note of any medications that need to be refilled</li>
+</ul>
+</div>
+<div class="check-item">
+<div class="eyebrow">Questions</div>
+<h3>Prepare your questions</h3>
+<p>Write down any questions or concerns ahead of time — especially anything you'd like to discuss regarding recent lab tests or diagnostic results.</p>
+</div>
+<div class="check-item">
+<div class="eyebrow">Vaccinations</div>
+<h3>Stay current on immunizations</h3>
+<ul>
+<li>High-dose flu vaccine available starting August 1, 2026 — recommended for seniors 65+</li>
+<li>Pneumococcal vaccine offered year-round</li>
+<li>Shingles &amp; RSV vaccines available — ask about age-appropriate timing</li>
+<li>Bring records of vaccines received elsewhere so we can update your chart</li>
+<li>See the <a aria-label="CDC's immunization schedules (opens in a new tab)" href="https://www.cdc.gov/vaccines/index.html" rel="noopener" style="color:var(--pine); text-decoration:underline;" target="_blank">CDC's immunization schedules</a> for age-based recommendations</li>
+</ul>
+</div>
+</div>
+<div class="portal-cta" style="margin-top:32px; background:var(--deepblue);">
+<div>
+<h3>Billing and payment information</h3>
+<p>Review copayment, coinsurance, self-pay discount, payment-plan, and financial-hardship information.</p>
+</div>
+<a class="btn btn-primary" href="#billing">View Billing &amp; Payments</a>
+</div>
+<div class="portal-cta">
+<div>
+<h3>Connect through our patient portal</h3>
+<p>Review lab, imaging, and procedure results, message your care team, and request refills — all in one secure place.</p>
+</div>
+<a aria-label="Open Patient Portal (opens in a new tab)" class="btn btn-primary" href="https://mycw104.ecwcloud.com/portal14112/jsp/login.jsp" rel="noopener" target="_blank">Open Patient Portal</a>
+</div>
+</div>
+</section>
+</main>
+<!-- FOOTER / CONTACT -->
+<footer id="contact">
+<div class="wrap">
+<div class="foot-grid">
+<div>
+<div class="foot-brand">Central Medical Associates</div>
+<p style="font-style:italic; color:var(--gold-light); margin-bottom:10px;">Patients are central to our mission.</p>
+<p style="max-width:280px;">An independent, physician-led primary care practice serving Elizabethtown and Radcliff, Kentucky, since 2016.</p>
+</div>
+<div>
+<h5>Elizabethtown</h5>
+<p>1311 &amp; 1321 Ring Road<br/>5900 N Dixie Highway<br/>Elizabethtown, KY 42701</p>
+</div>
+<div>
+<h5>Radcliff</h5>
+<p>700 W Lincoln Trail Blvd<br/>Radcliff, KY 40160<br/><a aria-label="Call 270‑351‑3192" class="phone" href="tel:+12703513192">270‑351‑3192</a></p>
+</div>
+<div>
+<h5>Patients</h5>
+<p><a href="#billing">Billing &amp; Payments →</a></p>
+<p style="margin-top:8px;"><a aria-label="HEALOW Patient Portal → (opens in a new tab)" href="https://mycw104.ecwcloud.com/portal14112/jsp/login.jsp" rel="noopener" target="_blank">HEALOW Patient Portal →</a></p>
+<p style="margin-top:8px;">All insurances accepted. New patients welcome.</p>
+<p style="margin-top:8px;">Call your location above to schedule or ask about office hours.</p>
+</div>
+</div>
+<div class="foot-affiliations">
+<h5>Affiliations &amp; resources</h5>
+<a aria-label="Baptist Health → (opens in a new tab)" href="https://www.bhsi.com/" rel="noopener" target="_blank">Baptist Health →</a>
+<a aria-label="CDC → (opens in a new tab)" href="https://www.cdc.gov/" rel="noopener" target="_blank">CDC →</a>
+<a aria-label="Kentucky Medical Association → (opens in a new tab)" href="https://kyma.org/" rel="noopener" target="_blank">Kentucky Medical Association →</a>
+<a aria-label="ACP → (opens in a new tab)" href="https://www.acponline.org/" rel="noopener" target="_blank">ACP →</a>
+<a aria-label="AMA → (opens in a new tab)" href="https://www.ama-assn.org/" rel="noopener" target="_blank">AMA →</a>
+<a aria-label="PNHP → (opens in a new tab)" href="https://pnhp.org/" rel="noopener" target="_blank">PNHP →</a>
+<a aria-label="AAFP → (opens in a new tab)" href="https://www.aafp.org/" rel="noopener" target="_blank">AAFP →</a>
+</div>
+<div class="foot-affiliations">
+<h5>Local referral partners</h5>
+<a aria-label="Heartland Imaging → (opens in a new tab)" href="https://heartlandimagingcenters.com/" rel="noopener" target="_blank">Heartland Imaging →</a>
+<a aria-label="Physical Therapy Associates → (opens in a new tab)" href="https://physicaltherapyky.com/" rel="noopener" target="_blank">Physical Therapy Associates →</a>
+<a aria-label="Lincoln Medical Supply → (opens in a new tab)" href="https://www.lincolnmedicalsupplyinc.com/" rel="noopener" target="_blank">Lincoln Medical Supply →</a>
+<a aria-label="Encompass Health Rehabilitation Hospital → (opens in a new tab)" href="https://www.encompasshealth.com/locations/lakeview-rehab" rel="noopener" target="_blank">Encompass Health Rehabilitation Hospital →</a>
+<a aria-label="Etown Pharmacy → (opens in a new tab)" href="https://www.etownpharmacy.com/" rel="noopener" target="_blank">Etown Pharmacy →</a>
+</div>
+<div class="foot-bottom">
+<span>© 2026 Central Medical Associates. All rights reserved.</span>
+<span>Elizabethtown &amp; Radcliff, Kentucky</span>
+</div>
+</div>
+</footer>
+<button class="to-top" aria-label="Back to top" title="Back to top">↑</button>
+<script>
+(() => {
+  const toggle = document.querySelector('.nav-toggle');
+  const menu = document.getElementById('primary-nav');
+  if (!toggle || !menu) return;
+
+  const closeMenu = () => {
+    menu.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', 'Open navigation menu');
+  };
+
+  toggle.addEventListener('click', () => {
+    const open = menu.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+  });
+
+  menu.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+  document.addEventListener('keydown', event => { if (event.key === 'Escape') closeMenu(); });
+  window.addEventListener('resize', () => { if (window.innerWidth > 900) closeMenu(); });
+})();
+
+(() => {
+  const header = document.querySelector('header');
+  const toTop = document.querySelector('.to-top');
+  const onScroll = () => {
+    if (header) header.classList.toggle('scrolled', window.scrollY > 8);
+    if (toTop) toTop.classList.toggle('show', window.scrollY > 700);
+  };
+  window.addEventListener('scroll', onScroll, {passive: true});
+  onScroll();
+  if (toTop) toTop.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduced && 'IntersectionObserver' in window) {
+    const targets = document.querySelectorAll('.section-head, .svc, .provider-card, .article-card, .post-card, .check-item, .billing-card, .tl-row, .loc-card, .fact, .focus-panel, .protect-card, .disease-card');
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, {rootMargin: '0px 0px -8% 0px', threshold: 0.05});
+    targets.forEach((t, i) => {
+      t.classList.add('js-reveal');
+      t.style.transitionDelay = ((i % 4) * 70) + 'ms';
+      io.observe(t);
+    });
+  }
+
+  const links = [...document.querySelectorAll('nav ul a[href^="#"]')]
+    .filter(a => a.getAttribute('href').length > 1 && !a.classList.contains('nav-cta'));
+  const map = new Map();
+  links.forEach(a => {
+    const sec = document.querySelector(a.getAttribute('href'));
+    if (sec) map.set(sec, a);
+  });
+  if ('IntersectionObserver' in window && map.size) {
+    const spy = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          links.forEach(l => l.classList.remove('active'));
+          const link = map.get(e.target);
+          if (link) link.classList.add('active');
+        }
+      });
+    }, {rootMargin: '-30% 0px -60% 0px'});
+    map.forEach((_, sec) => spy.observe(sec));
+  }
+})();
+</script></body>
+</html>
