@@ -17,6 +17,7 @@
   "@context": "https://schema.org",
   "@type": "MedicalOrganization",
   "name": "Central Medical Associates",
+  "url": "https://cmahardin.com/",
   "slogan": "Patients are central to our mission.",
   "medicalSpecialty": ["PrimaryCare", "Psychiatric"],
   "foundingDate": "2016",
@@ -925,6 +926,140 @@
   .post-card .full p{ margin-bottom:10px; }
 
 
+
+  /* ---------- FOCUS ON NAVIGATION DROPDOWN ---------- */
+  nav .has-dropdown{
+    position:relative;
+  }
+  nav .dropdown-toggle{
+    appearance:none;
+    border:0;
+    background:transparent;
+    color:var(--ink-soft);
+    font:inherit;
+    font-size:14.5px;
+    font-weight:600;
+    letter-spacing:.01em;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    gap:6px;
+    padding:0;
+  }
+  nav .dropdown-toggle:hover,
+  nav .dropdown-toggle:focus-visible{
+    color:var(--pine);
+  }
+  nav .dropdown-toggle::after{
+    content:"";
+    width:7px;
+    height:7px;
+    border-right:2px solid currentColor;
+    border-bottom:2px solid currentColor;
+    transform:rotate(45deg) translateY(-2px);
+    transition:transform .16s ease;
+  }
+  nav .has-dropdown.is-open > .dropdown-toggle::after{
+    transform:rotate(225deg) translate(-1px,-1px);
+  }
+  nav .dropdown-menu{
+    display:none;
+    position:absolute;
+    top:calc(100% + 14px);
+    left:50%;
+    transform:translateX(-50%);
+    min-width:250px;
+    background:var(--card);
+    border:1px solid var(--line);
+    box-shadow:0 14px 34px rgba(29,43,38,.14);
+    padding:8px;
+    z-index:80;
+  }
+  nav .has-dropdown.is-open > .dropdown-menu,
+  nav .has-dropdown:hover > .dropdown-menu,
+  nav .has-dropdown:focus-within > .dropdown-menu{
+    display:block;
+  }
+  nav .dropdown-menu::before{
+    content:"";
+    position:absolute;
+    top:-8px;
+    left:50%;
+    width:14px;
+    height:14px;
+    background:var(--card);
+    border-left:1px solid var(--line);
+    border-top:1px solid var(--line);
+    transform:translateX(-50%) rotate(45deg);
+  }
+  nav .dropdown-menu li{
+    display:block;
+  }
+  nav .dropdown-menu a,
+  nav .dropdown-menu .dropdown-note{
+    display:block;
+    padding:11px 12px;
+    line-height:1.35;
+  }
+  nav .dropdown-menu a{
+    color:var(--ink);
+    font-size:14px;
+    border-radius:2px;
+  }
+  nav .dropdown-menu a:hover,
+  nav .dropdown-menu a:focus-visible{
+    background:var(--pine-pale);
+    color:var(--pine);
+  }
+  nav .dropdown-menu .topic-kicker{
+    display:block;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:.07em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-bottom:2px;
+  }
+  nav .dropdown-menu .dropdown-note{
+    border-top:1px solid var(--line);
+    color:var(--ink-soft);
+    font-size:12.5px;
+    margin-top:4px;
+  }
+
+  @media (max-width:900px){
+    nav ul.is-open .has-dropdown{
+      padding:0;
+    }
+    nav ul.is-open .dropdown-toggle{
+      width:100%;
+      justify-content:space-between;
+      padding:12px 2px;
+      font-size:16px;
+    }
+    nav ul.is-open .dropdown-menu{
+      position:static;
+      transform:none;
+      min-width:0;
+      box-shadow:none;
+      border:0;
+      border-top:1px solid var(--line);
+      background:rgba(220,230,224,.45);
+      padding:4px 10px 8px;
+    }
+    nav ul.is-open .dropdown-menu::before{
+      display:none;
+    }
+    nav ul.is-open .dropdown-menu li{
+      border-bottom:0;
+    }
+    nav ul.is-open .dropdown-menu a{
+      padding:10px 8px;
+      font-size:14.5px;
+    }
+  }
+
   /* ---------- FOCUS ON: TIMELY HEALTH TOPICS ---------- */
   .focus-on{
     background: linear-gradient(180deg, #EAF3F8 0%, var(--paper) 100%);
@@ -1243,8 +1378,63 @@
     #billing .billing-phone{ align-items:flex-start; flex-direction:column; gap:2px; }
   }
 
+  /* ---------- POLISH: DEPTH, MOTION & MICRO-INTERACTIONS ---------- */
+  .svc, .svc-list, .provider-card, .article-card, .post-card, .check-item,
+  .protect-card, .disease-card, .billing-card, .focus-panel{
+    transition: box-shadow .28s ease, transform .28s ease, border-color .28s ease;
+  }
+  .svc:hover, .svc-list:hover, .provider-card:hover, .article-card:hover,
+  .post-card:hover, .check-item:hover, .billing-card:hover{
+    box-shadow: 0 20px 46px rgba(29,43,38,.12);
+    transform: translateY(-3px);
+  }
+  .protect-card:hover, .disease-card:hover{
+    box-shadow: 0 14px 32px rgba(27,58,92,.10);
+    transform: translateY(-2px);
+  }
 
-  /* ---------- ELEVATION LAYER ---------- */
+  .loc-photo, .provider-photo, .hero-photo{ overflow:hidden; }
+  .loc-photo img, .provider-photo img, .hero-photo img{
+    transition: transform .6s cubic-bezier(.2,.7,.3,1);
+  }
+  .loc-photo:hover img, .provider-photo:hover img, .hero-photo:hover img{
+    transform: scale(1.06);
+  }
+
+  .btn{ transition: background .2s ease, color .2s ease, box-shadow .2s ease, transform .2s ease; }
+  .btn-primary:hover{ box-shadow: 0 10px 24px rgba(36,70,63,.30); transform: translateY(-2px); }
+  .btn-ghost:hover{ box-shadow: 0 10px 24px rgba(36,70,63,.14); transform: translateY(-2px); }
+  .nav-cta{ transition: background .2s ease, box-shadow .2s ease, transform .2s ease; }
+  .nav-cta:hover{ background: var(--pine-light); box-shadow: 0 8px 20px rgba(36,70,63,.28); transform: translateY(-1px); }
+  .portal-cta .btn-primary:hover{ box-shadow: 0 10px 24px rgba(169,122,43,.35); }
+  #billing .billing-phone{ transition: box-shadow .2s ease, transform .2s ease; }
+  #billing .billing-phone:hover{ box-shadow: 0 10px 24px rgba(27,58,92,.30); transform: translateY(-2px); }
+
+  .svc-tags span{ transition: background .2s ease, color .2s ease, border-color .2s ease; }
+  .svc-tags span:hover{ background: var(--pine); color: var(--white); }
+
+  .loc-actions a{ transition: background .18s ease, color .18s ease, transform .18s ease; }
+  .loc-actions a:hover{ transform: translateY(-1px); }
+
+  .foot-affiliations a{ transition: color .2s ease, border-color .2s ease; }
+
+  .cat-strip span{ transition: background .2s ease, color .2s ease, border-color .2s ease; cursor:default; }
+  .cat-strip span:hover{ background: var(--pine); color: var(--white); border-color: var(--pine); }
+
+
+  /* Slightly richer separation for stacked directory rows */
+  .loc-card{ transition: background .25s ease; }
+  .loc-card:hover{ background: rgba(250,250,245,.65); }
+
+  @media (prefers-reduced-motion: reduce){
+    .svc, .svc-list, .provider-card, .article-card, .post-card, .check-item,
+    .protect-card, .disease-card, .billing-card, .focus-panel,
+    .loc-photo img, .provider-photo img, .hero-photo img,
+    .btn, .nav-cta, .loc-actions a, .loc-card{ transition:none !important; transform:none !important; }
+  }
+
+
+  /* ---------- ELEVATION LAYER (complements the motion block above) ---------- */
   ::selection{ background: var(--pine-pale); color: var(--pine); }
   h1,h2,h3,h4{ text-wrap: balance; }
 
@@ -1260,6 +1450,7 @@
     nav ul a:not(.nav-cta):hover::after,
     nav ul a:not(.nav-cta).active::after{ right:0; }
     nav ul a.active{ color: var(--pine); }
+    nav .dropdown-menu a::after{ display:none; }
   }
 
   .hero-chips{ display:flex; gap:10px; flex-wrap:wrap; justify-content:center; margin-top:28px; }
@@ -1270,19 +1461,6 @@
     padding:7px 14px; border-radius:2px;
   }
 
-  .svc, .provider-card, .article-card, .post-card, .billing-card,
-  .check-item, .protect-card, .disease-card{
-    transition: transform .22s ease, box-shadow .22s ease;
-  }
-  .svc:hover, .provider-card:hover, .article-card:hover, .post-card:hover,
-  .billing-card:hover, .check-item:hover, .protect-card:hover, .disease-card:hover{
-    transform: translateY(-4px);
-    box-shadow: 0 16px 36px -16px rgba(29,43,38,.24);
-  }
-  .provider-photo img{ transition: transform .45s ease; }
-  .provider-card:hover .provider-photo img{ transform: scale(1.035); }
-  .loc-photo img{ transition: transform .45s ease; }
-  .loc-photo:hover img{ transform: scale(1.04); }
   .provider-info summary, .article-card summary, .post-card summary{ transition: color .15s ease; }
   .provider-info summary:hover, .article-card summary:hover, .post-card summary:hover{ color: var(--gold); }
 
@@ -1326,7 +1504,18 @@
 <li><a href="#locations">Locations</a></li>
 <li><a href="#providers">Clinicians</a></li>
 <li><a href="#health-library">Health Library</a></li>
-<li><a href="#focus-on">Focus On…</a></li>
+<li class="has-dropdown">
+<button aria-controls="focus-dropdown" aria-expanded="false" class="dropdown-toggle" type="button">
+  Focus On…
+</button>
+<ul aria-label="Focus On topics" class="dropdown-menu" id="focus-dropdown">
+<li><a href="#heat-exhaustion"><span class="topic-kicker">Current feature</span>Heat Exhaustion: Symptoms, Prevention &amp; Treatment</a></li>
+<li><a href="#focus-on"><span class="topic-kicker">Previous topic</span>Tick Bites: Prevention, Removal &amp; Warning Signs</a></li>
+<li><a href="#health-library"><span class="topic-kicker">Browse</span>Health Library</a></li>
+<li class="dropdown-note">Additional timely health topics will be added periodically.</li>
+<!-- Add future Focus On topic links here as new sections or pages are created. -->
+</ul>
+</li>
 <li><a href="#news">News</a></li>
 <li><a href="#patients">Patients</a></li>
 <li><a href="#billing">Billing</a></li>
@@ -1554,7 +1743,7 @@
 <div class="grp-people">
 <span>Ayaz Ahmed, MD, FACP</span>
 <span>Tanya Revor, APRN</span>
-<span>Carrie Westbrooke, APRN</span>
+<span>Carrie Westbrook, APRN</span>
 </div>
 </div>
 <div class="grp">
@@ -1707,14 +1896,14 @@
 </div>
 </div>
 <div class="provider-card">
-<div class="provider-photo"><img alt="Carrie Westbrooke, APRN portrait" decoding="async" loading="lazy" src="assets/img/providers/carrie-westbrook.jpg"/></div>
+<div class="provider-photo"><img alt="Carrie Westbrook, APRN portrait" decoding="async" loading="lazy" src="assets/img/providers/carrie-westbrook.jpg"/></div>
 <div class="provider-info">
-<h4>Carrie Westbrooke, APRN</h4>
+<h4>Carrie Westbrook, APRN</h4>
 <div class="spec">Family Practice</div>
 <span class="npat">Accepting new patients</span>
 <details>
 <summary>Read full bio</summary>
-<div class="bio"><p>Carrie Westbrooke is an Advanced Practice Registered Nurse providing family practice care at the CMA — Ahmed location on Ring Road in Elizabethtown.</p></div>
+<div class="bio"><p>Carrie Westbrook is a Nurse Practitioner with a highly diverse clinical background. A Kentucky native and former military brat, her first career was as an Electronics Engineer repairing military components. Finding her passion in healthcare, she became a nurse in 2011. Carrie built a broad foundation of patient care experience—spanning geriatrics, pediatrics, psychiatry, and med-surg—before earning her NP in 2022.</p><p>Outside the clinic, she is a proud mom of three boys, an enthusiastic sideline soccer fan, and loves spending downtime at her happy place: the beach.</p></div>
 </details>
 </div>
 </div>
@@ -1778,6 +1967,64 @@
 </details>
 </div>
 </div>
+</div>
+</div>
+</section><section id="patients">
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">Before your visit</div>
+<h2>Preparing for your office visit.</h2>
+<p>A little preparation helps you get the most out of your time with your clinician.</p>
+</div>
+<div class="welcome-banner">
+<span class="wb-check">✓</span>
+<p><strong>All insurances are accepted</strong> — and new patients are always welcome across every CMA location.</p>
+</div>
+<div class="checklist">
+<div class="check-item">
+<div class="eyebrow">Arrival</div>
+<h3>Arrive early &amp; check in</h3>
+<p>Please arrive 15 minutes before your scheduled appointment to complete check-in. Be prepared to share any recent changes to your phone number, address, email, or insurance coverage at the front desk.</p>
+</div>
+<div class="check-item">
+<div class="eyebrow">Medications</div>
+<h3>Bring your medications</h3>
+<ul>
+<li>All medication bottles — prescriptions, over-the-counter drugs, vitamins, and supplements</li>
+<li>A written list of current medications for your records</li>
+<li>A note of any medications that need to be refilled</li>
+</ul>
+</div>
+<div class="check-item">
+<div class="eyebrow">Questions</div>
+<h3>Prepare your questions</h3>
+<p>Write down any questions or concerns ahead of time — especially anything you'd like to discuss regarding recent lab tests or diagnostic results.</p>
+</div>
+<div class="check-item">
+<div class="eyebrow">Vaccinations</div>
+<h3>Stay current on immunizations</h3>
+<ul>
+<li>High-dose flu vaccine available starting August 1, 2026 — recommended for seniors 65+</li>
+<li>Pneumococcal vaccine offered year-round</li>
+<li>Shingles &amp; RSV vaccines available — ask about age-appropriate timing</li>
+<li>Bring records of vaccines received elsewhere so we can update your chart</li>
+<li>See the <a aria-label="CDC's immunization schedules (opens in a new tab)" href="https://www.cdc.gov/vaccines/index.html" rel="noopener" style="color:var(--pine); text-decoration:underline;" target="_blank">CDC's immunization schedules</a> for age-based recommendations</li>
+</ul>
+</div>
+</div>
+<div class="portal-cta" style="margin-top:32px; background:var(--deepblue);">
+<div>
+<h3>Billing and payment information</h3>
+<p>Review copayment, coinsurance, self-pay discount, payment-plan, and financial-hardship information.</p>
+</div>
+<a class="btn btn-primary" href="#billing">View Billing &amp; Payments</a>
+</div>
+<div class="portal-cta">
+<div>
+<h3>Connect through our patient portal</h3>
+<p>Review lab, imaging, and procedure results, message your care team, and request refills — all in one secure place.</p>
+</div>
+<a aria-label="Open Patient Portal (opens in a new tab)" class="btn btn-primary" href="https://mycw104.ecwcloud.com/portal14112/jsp/login.jsp" rel="noopener" target="_blank">Open Patient Portal</a>
 </div>
 </div>
 </section>
@@ -1920,89 +2167,7 @@
 </div>
 </section>
 <!-- FOCUS ON -->
-<section aria-labelledby="focus-on-heading" class="focus-on" id="focus-on">
-<div class="wrap">
-<div class="focus-hero">
-<div>
-<div class="eyebrow">Focus On…</div>
-<h2 id="focus-on-heading">Tick Bites: Prevention, Removal &amp; Warning Signs</h2>
-<p class="focus-lead"><strong>Tick activity is a major concern this season.</strong> CDC reported that weekly emergency-department visits for tick bites were higher than usual in 2026. Ticks are generally most active during the warmer months—especially April through September—but exposure can occur at any time of year.</p>
-<div class="focus-meta">
-<span>Updated July 2026</span>
-<span>Seasonal patient guide</span>
-<span>Kentucky &amp; surrounding region</span>
-</div>
-</div>
-<aside aria-label="Important tick bite advice" class="focus-alert">
-<span class="label">Act promptly</span>
-<strong>Remove an attached tick as soon as possible.</strong>
-<p>Then watch for fever, rash, headache, unusual fatigue, muscle or joint pain, or other illness during the following days and weeks.</p>
-</aside>
-</div>
-<div class="focus-panel">
-<h3>How to protect yourself and your family</h3>
-<div class="protect-grid">
-<article class="protect-card">
-<h4>Before going outdoors</h4>
-<p>Use an EPA-registered insect repellent as directed. Treat clothing and gear with products containing 0.5% permethrin, or purchase pretreated clothing. Wear long sleeves, long pants, closed shoes, and light-colored clothing when practical.</p>
-</article>
-<article class="protect-card">
-<h4>Avoid common tick habitats</h4>
-<p>Ticks commonly live in wooded, brushy, grassy, and leaf-covered areas. Walk in the center of trails and avoid brushing against tall grass or dense vegetation.</p>
-</article>
-<article class="protect-card">
-<h4>Check promptly after exposure</h4>
-<p>Check the entire body, including the scalp, hairline, ears, underarms, waist, groin, behind the knees, and between the legs. Carefully inspect children, pets, clothing, backpacks, and outdoor gear.</p>
-</article>
-<article class="protect-card">
-<h4>Shower and handle clothing</h4>
-<p>Shower soon after returning indoors. Tumble-dry clothing on high heat when appropriate; washing alone may not kill ticks. Follow garment-care instructions.</p>
-</article>
-</div>
-</div>
-<div class="focus-panel">
-<h3>How to remove a tick safely</h3>
-<ol>
-<li>Use clean, fine-tipped tweezers.</li>
-<li>Grasp the tick as close to the skin's surface as possible.</li>
-<li>Pull upward with steady, even pressure. Do not twist or jerk.</li>
-<li>Clean the bite area and your hands with soap and water, rubbing alcohol, or hand sanitizer.</li>
-<li>Record the date and likely location of exposure. A clear photograph of the tick may be useful.</li>
-</ol>
-<p style="margin-top:15px;"><strong>Do not</strong> burn the tick, cover it with petroleum jelly or nail polish, or use other methods intended to make it detach. Prompt mechanical removal with tweezers is preferred.</p>
-</div>
-<div class="focus-panel">
-<h3>Illnesses associated with tick bites</h3>
-<div class="disease-grid">
-<article class="disease-card">
-<span class="tick-label">Rocky Mountain spotted fever</span>
-<h4>RMSF</h4>
-<p>May cause fever, severe headache, muscle pain, nausea or vomiting, abdominal pain, and rash. The rash may appear late or may be absent. RMSF can become life-threatening quickly, so early medical evaluation and treatment are critical.</p>
-</article>
-<article class="disease-card">
-<span class="tick-label">Bacterial infection</span>
-<h4>Ehrlichiosis</h4>
-<p>Symptoms often begin within one to two weeks and may include fever, chills, headache, muscle aches, nausea, fatigue, and sometimes rash. Many patients do not remember a tick bite.</p>
-</article>
-<article class="disease-card">
-<span class="tick-label">Blacklegged ticks</span>
-<h4>Lyme disease</h4>
-<p>Possible symptoms include fever, headache, fatigue, muscle or joint pain, swollen lymph nodes, and an expanding rash. The rash does not always look like a classic “bull's-eye,” and some patients have no recognized rash.</p>
-</article>
-<article class="disease-card">
-<span class="tick-label">Delayed allergy</span>
-<h4>Alpha-gal syndrome</h4>
-<p>A tick bite can trigger a potentially serious allergy to alpha-gal, a sugar found in mammalian meat and some mammal-derived products. Reactions may be delayed for several hours after eating and can include hives, swelling, stomach symptoms, breathing difficulty, or anaphylaxis.</p>
-</article>
-</div>
-</div>
-<div class="warning-box">
-<h3>When to contact a clinician</h3>
-<p>Call promptly if you develop fever, rash, severe headache, marked fatigue, muscle or joint pain, facial weakness, palpitations, shortness of breath, or other new illness within days to weeks after a tick bite or after spending time in tick habitat. Tell the clinician when and where the exposure occurred. Seek emergency care for trouble breathing, swelling of the tongue or throat, fainting, confusion, severe weakness, or other signs of a serious allergic reaction or severe illness.</p>
-</div>
-<p class="source-note"><strong>Sources:</strong> U.S. Centers for Disease Control and Prevention guidance on ticks, tick-bite removal, Rocky Mountain spotted fever, ehrlichiosis, Lyme disease, and alpha-gal syndrome. This information is educational and does not replace an individual medical evaluation.</p>
-</div>
-</section>
+<!-- FOCUS ON: HEAT EXHAUSTION -->
 <!-- NEWS / BLOG -->
 <section id="news">
 <div class="wrap">
@@ -2135,67 +2300,129 @@
 </article>
 </div>
 </div>
+</section><section aria-labelledby="heat-exhaustion-heading" class="focus-on" id="heat-exhaustion">
+<div class="wrap">
+<div class="focus-hero">
+<div>
+<div class="eyebrow">Focus On…</div>
+<h2 id="heat-exhaustion-heading">Heat Exhaustion: Symptoms, Prevention &amp; Treatment</h2>
+<p class="focus-lead">Heat exhaustion occurs when the body loses too much water and salt, usually through heavy sweating. It can progress to life-threatening heat stroke if it is not recognized and treated promptly.</p>
+<div class="focus-meta">
+<span>Summer health</span>
+<span>Outdoor safety</span>
+<span>Brief patient guide</span>
+</div>
+</div>
+<aside aria-label="Heat exhaustion action advice" class="focus-alert">
+<span class="label">Take action</span>
+<strong>Stop activity and begin cooling immediately.</strong>
+<p>Move to air conditioning or shade, loosen excess clothing, apply cool wet cloths, and sip cool fluids if the person is awake and able to swallow.</p>
+</aside>
+</div>
+<div class="focus-panel">
+<h3>Common symptoms</h3>
+<p>Symptoms may include heavy sweating, headache, dizziness or lightheadedness, weakness, unusual fatigue, irritability, thirst, nausea or vomiting, muscle cramps, rapid heartbeat, elevated body temperature, and decreased urination.</p>
+</div>
+<div class="protect-grid">
+<article class="protect-card">
+<h4>Prevention</h4>
+<p>Drink fluids regularly, take frequent breaks in a cool or shaded place, wear lightweight and light-colored clothing, avoid strenuous activity during the hottest part of the day, and gradually increase exposure when returning to outdoor work or exercise. Never leave children, older adults, or pets in a parked vehicle.</p>
+</article>
+<article class="protect-card">
+<h4>Immediate treatment</h4>
+<p>Move the person to a cooler location, have them rest, loosen or remove unnecessary clothing, cool the skin with wet cloths, misting, or a cool shower, and provide cool water or an electrolyte drink if they are alert and not vomiting. Do not resume strenuous activity that day.</p>
+</article>
+</div>
+<div class="warning-box">
+<h3>Heat stroke is an emergency</h3>
+<p>Call 911 immediately for confusion, disorientation, slurred speech, fainting, seizures, inability to drink, very high body temperature, or hot skin that may be dry or heavily sweating. Begin rapid cooling while waiting for emergency help. Do not give fluids to a person who is confused, unconscious, or unable to swallow safely.</p>
+</div>
+<p class="source-note"><strong>Sources:</strong> CDC/NIOSH and OSHA guidance on heat-related illness and first aid. This information is educational and does not replace an individual medical evaluation.</p>
+</div>
+</section><section aria-labelledby="focus-on-heading" class="focus-on" id="focus-on">
+<div class="wrap">
+<div class="focus-hero">
+<div>
+<div class="eyebrow">Focus On…</div>
+<h2 id="focus-on-heading">Tick Bites: Prevention, Removal &amp; Warning Signs</h2>
+<p class="focus-lead"><strong>Tick activity is a major concern this season.</strong> CDC reported that weekly emergency-department visits for tick bites were higher than usual in 2026. Ticks are generally most active during the warmer months—especially April through September—but exposure can occur at any time of year.</p>
+<div class="focus-meta">
+<span>Updated July 2026</span>
+<span>Seasonal patient guide</span>
+<span>Kentucky &amp; surrounding region</span>
+</div>
+</div>
+<aside aria-label="Important tick bite advice" class="focus-alert">
+<span class="label">Act promptly</span>
+<strong>Remove an attached tick as soon as possible.</strong>
+<p>Then watch for fever, rash, headache, unusual fatigue, muscle or joint pain, or other illness during the following days and weeks.</p>
+</aside>
+</div>
+<div class="focus-panel">
+<h3>How to protect yourself and your family</h3>
+<div class="protect-grid">
+<article class="protect-card">
+<h4>Before going outdoors</h4>
+<p>Use an EPA-registered insect repellent as directed. Treat clothing and gear with products containing 0.5% permethrin, or purchase pretreated clothing. Wear long sleeves, long pants, closed shoes, and light-colored clothing when practical.</p>
+</article>
+<article class="protect-card">
+<h4>Avoid common tick habitats</h4>
+<p>Ticks commonly live in wooded, brushy, grassy, and leaf-covered areas. Walk in the center of trails and avoid brushing against tall grass or dense vegetation.</p>
+</article>
+<article class="protect-card">
+<h4>Check promptly after exposure</h4>
+<p>Check the entire body, including the scalp, hairline, ears, underarms, waist, groin, behind the knees, and between the legs. Carefully inspect children, pets, clothing, backpacks, and outdoor gear.</p>
+</article>
+<article class="protect-card">
+<h4>Shower and handle clothing</h4>
+<p>Shower soon after returning indoors. Tumble-dry clothing on high heat when appropriate; washing alone may not kill ticks. Follow garment-care instructions.</p>
+</article>
+</div>
+</div>
+<div class="focus-panel">
+<h3>How to remove a tick safely</h3>
+<ol>
+<li>Use clean, fine-tipped tweezers.</li>
+<li>Grasp the tick as close to the skin's surface as possible.</li>
+<li>Pull upward with steady, even pressure. Do not twist or jerk.</li>
+<li>Clean the bite area and your hands with soap and water, rubbing alcohol, or hand sanitizer.</li>
+<li>Record the date and likely location of exposure. A clear photograph of the tick may be useful.</li>
+</ol>
+<p style="margin-top:15px;"><strong>Do not</strong> burn the tick, cover it with petroleum jelly or nail polish, or use other methods intended to make it detach. Prompt mechanical removal with tweezers is preferred.</p>
+</div>
+<div class="focus-panel">
+<h3>Illnesses associated with tick bites</h3>
+<div class="disease-grid">
+<article class="disease-card">
+<span class="tick-label">Rocky Mountain spotted fever</span>
+<h4>RMSF</h4>
+<p>May cause fever, severe headache, muscle pain, nausea or vomiting, abdominal pain, and rash. The rash may appear late or may be absent. RMSF can become life-threatening quickly, so early medical evaluation and treatment are critical.</p>
+</article>
+<article class="disease-card">
+<span class="tick-label">Bacterial infection</span>
+<h4>Ehrlichiosis</h4>
+<p>Symptoms often begin within one to two weeks and may include fever, chills, headache, muscle aches, nausea, fatigue, and sometimes rash. Many patients do not remember a tick bite.</p>
+</article>
+<article class="disease-card">
+<span class="tick-label">Blacklegged ticks</span>
+<h4>Lyme disease</h4>
+<p>Possible symptoms include fever, headache, fatigue, muscle or joint pain, swollen lymph nodes, and an expanding rash. The rash does not always look like a classic “bull's-eye,” and some patients have no recognized rash.</p>
+</article>
+<article class="disease-card">
+<span class="tick-label">Delayed allergy</span>
+<h4>Alpha-gal syndrome</h4>
+<p>A tick bite can trigger a potentially serious allergy to alpha-gal, a sugar found in mammalian meat and some mammal-derived products. Reactions may be delayed for several hours after eating and can include hives, swelling, stomach symptoms, breathing difficulty, or anaphylaxis.</p>
+</article>
+</div>
+</div>
+<div class="warning-box">
+<h3>When to contact a clinician</h3>
+<p>Call promptly if you develop fever, rash, severe headache, marked fatigue, muscle or joint pain, facial weakness, palpitations, shortness of breath, or other new illness within days to weeks after a tick bite or after spending time in tick habitat. Tell the clinician when and where the exposure occurred. Seek emergency care for trouble breathing, swelling of the tongue or throat, fainting, confusion, severe weakness, or other signs of a serious allergic reaction or severe illness.</p>
+</div>
+<p class="source-note"><strong>Sources:</strong> U.S. Centers for Disease Control and Prevention guidance on ticks, tick-bite removal, Rocky Mountain spotted fever, ehrlichiosis, Lyme disease, and alpha-gal syndrome. This information is educational and does not replace an individual medical evaluation.</p>
+</div>
 </section>
 <!-- PATIENTS -->
-<section id="patients">
-<div class="wrap">
-<div class="section-head">
-<div class="eyebrow">Before your visit</div>
-<h2>Preparing for your office visit.</h2>
-<p>A little preparation helps you get the most out of your time with your clinician.</p>
-</div>
-<div class="welcome-banner">
-<span class="wb-check">✓</span>
-<p><strong>All insurances are accepted</strong> — and new patients are always welcome across every CMA location.</p>
-</div>
-<div class="checklist">
-<div class="check-item">
-<div class="eyebrow">Arrival</div>
-<h3>Arrive early &amp; check in</h3>
-<p>Please arrive 15 minutes before your scheduled appointment to complete check-in. Be prepared to share any recent changes to your phone number, address, email, or insurance coverage at the front desk.</p>
-</div>
-<div class="check-item">
-<div class="eyebrow">Medications</div>
-<h3>Bring your medications</h3>
-<ul>
-<li>All medication bottles — prescriptions, over-the-counter drugs, vitamins, and supplements</li>
-<li>A written list of current medications for your records</li>
-<li>A note of any medications that need to be refilled</li>
-</ul>
-</div>
-<div class="check-item">
-<div class="eyebrow">Questions</div>
-<h3>Prepare your questions</h3>
-<p>Write down any questions or concerns ahead of time — especially anything you'd like to discuss regarding recent lab tests or diagnostic results.</p>
-</div>
-<div class="check-item">
-<div class="eyebrow">Vaccinations</div>
-<h3>Stay current on immunizations</h3>
-<ul>
-<li>High-dose flu vaccine available starting August 1, 2026 — recommended for seniors 65+</li>
-<li>Pneumococcal vaccine offered year-round</li>
-<li>Shingles &amp; RSV vaccines available — ask about age-appropriate timing</li>
-<li>Bring records of vaccines received elsewhere so we can update your chart</li>
-<li>See the <a aria-label="CDC's immunization schedules (opens in a new tab)" href="https://www.cdc.gov/vaccines/index.html" rel="noopener" style="color:var(--pine); text-decoration:underline;" target="_blank">CDC's immunization schedules</a> for age-based recommendations</li>
-</ul>
-</div>
-</div>
-<div class="portal-cta" style="margin-top:32px; background:var(--deepblue);">
-<div>
-<h3>Billing and payment information</h3>
-<p>Review copayment, coinsurance, self-pay discount, payment-plan, and financial-hardship information.</p>
-</div>
-<a class="btn btn-primary" href="#billing">View Billing &amp; Payments</a>
-</div>
-<div class="portal-cta">
-<div>
-<h3>Connect through our patient portal</h3>
-<p>Review lab, imaging, and procedure results, message your care team, and request refills — all in one secure place.</p>
-</div>
-<a aria-label="Open Patient Portal (opens in a new tab)" class="btn btn-primary" href="https://mycw104.ecwcloud.com/portal14112/jsp/login.jsp" rel="noopener" target="_blank">Open Patient Portal</a>
-</div>
-</div>
-</section>
 </main>
 <!-- FOOTER / CONTACT -->
 <footer id="contact">
@@ -2265,9 +2492,43 @@
     toggle.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
   });
 
-  menu.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
-  document.addEventListener('keydown', event => { if (event.key === 'Escape') closeMenu(); });
-  window.addEventListener('resize', () => { if (window.innerWidth > 900) closeMenu(); });
+  const dropdown = menu.querySelector('.has-dropdown');
+  const dropdownToggle = menu.querySelector('.dropdown-toggle');
+
+  const closeDropdown = () => {
+    if (!dropdown || !dropdownToggle) return;
+    dropdown.classList.remove('is-open');
+    dropdownToggle.setAttribute('aria-expanded', 'false');
+  };
+
+  if (dropdown && dropdownToggle) {
+    dropdownToggle.addEventListener('click', event => {
+      event.stopPropagation();
+      const open = dropdown.classList.toggle('is-open');
+      dropdownToggle.setAttribute('aria-expanded', String(open));
+    });
+  }
+
+  menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+    closeDropdown();
+    closeMenu();
+  }));
+
+  document.addEventListener('click', event => {
+    if (dropdown && !dropdown.contains(event.target)) closeDropdown();
+  });
+
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') {
+      closeDropdown();
+      closeMenu();
+    }
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 900) closeMenu();
+    closeDropdown();
+  });
 })();
 
 (() => {

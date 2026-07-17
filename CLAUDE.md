@@ -20,19 +20,22 @@ group in Elizabethtown & Radcliff, Kentucky. The entire site is **one file: `ind
 
 `#about` story + timeline · `#services` 3 service cards + full tag list · `#locations`
 5 offices w/ Google Maps embeds · `#providers` 12 clinician cards with expandable bios ·
-`#health-library` patient-education articles · `#focus-on` seasonal deep-dive (currently
-tick bites) · `#news` announcements · `#billing` payment policies · `#patients` visit prep ·
-footer = contact + affiliations. The gold announcement bar sits under the nav.
+`#patients` visit prep · `#health-library` patient-education articles · `#news` announcements ·
+`#billing` payment policies · `#heat-exhaustion` + `#focus-on` seasonal "Focus On" deep-dives
+(current + previous topic) · footer = contact + affiliations. The gold announcement bar sits
+under the nav. The nav's "Focus On…" item is a dropdown listing the Focus On topics — when
+adding a new topic, add a new section AND a link in the dropdown menu (`#focus-dropdown`).
 
 ## Common tasks
 
 - **Update a bio**: find the clinician's `<div class="provider-card">` in `#providers`;
-  the bio is inside `<details><div class="bio">`. Carrie Westbrooke's bio is a placeholder
-  awaiting her real one.
+  the bio is inside `<details><div class="bio">`. (Spelling note: it's Carrie **Westbrook**.)
 - **Add a news post**: copy an existing `<div class="post-card">` in `#news`.
 - **Add a health article**: copy an `<div class="article-card">` in `#health-library`.
 - **Change the announcement bar**: edit `.announce-text` near the top of `<body>`.
-- **Swap the "Focus On" topic**: replace content inside `#focus-on` (keep the panel structure).
+- **Add a "Focus On" topic**: copy an existing focus section (e.g. `#heat-exhaustion`), give it
+  a new id, add it before the previous topics, and add its link to the nav dropdown
+  (`#focus-dropdown`) — move the old "Current feature" kicker to the new one.
 - **Photos**: optimized JPEGs in `assets/img/providers/` (~700px) and `assets/img/locations/`
   (~1200px). Compress before adding (`sips -s format jpeg -s formatOptions 80 -Z 700 in.png --out out.jpg`).
   Never inline images as base64.
