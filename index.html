@@ -46,6 +46,8 @@
     --deepblue: #1B3A5C;
     --paper: #F1F3EC;
     --paper-deep: #E7EADC;
+    --pastel-blue: #DCEAF2;
+    --pastel-green: #E1EFE2;
     --card: #FAFAF5;
     --ink: #1D2B26;
     --ink-soft: #4B5A54;
@@ -55,8 +57,8 @@
   }
 
   *{box-sizing:border-box; margin:0; padding:0;}
-  [id]{scroll-margin-top:96px;}
   html{scroll-behavior:smooth;}
+  [id]{scroll-margin-top:96px;}
   body{
     background: var(--paper);
     color: var(--ink);
@@ -93,6 +95,36 @@
     width:22px; height:1px;
     background: var(--gold);
     display:inline-block;
+  }
+
+  /* ---------- TOP PHONE BAR ---------- */
+  .top-bar{
+    background: var(--pine);
+  }
+  .top-bar-inner{
+    max-width: var(--max); margin:0 auto; padding: 7px 32px;
+    display:flex; align-items:center; justify-content:flex-end;
+  }
+  .top-bar-phone{
+    display:flex; align-items:center; gap:7px;
+    color: var(--white) !important;
+    text-decoration:none;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:0.02em;
+  }
+  .top-bar-phone:hover{ color: var(--gold-light) !important; text-decoration:underline; }
+  .top-bar-phone-label{
+    font-family:'Source Sans 3',sans-serif;
+    text-transform:uppercase;
+    font-size:10.5px;
+    font-weight:600;
+    letter-spacing:.08em;
+    color: rgba(255,255,255,.78);
+  }
+  @media (max-width:560px){
+    .top-bar-inner{padding:7px 20px; justify-content:center;}
   }
 
   /* ---------- NAV ---------- */
@@ -229,15 +261,11 @@
   }
   .hero-noimg .hero-copy{
     max-width: 960px;
-    padding: 88px 48px 72px;
-    margin: 64px 0;
+    padding: 110px 40px 88px;
     align-items:center;
-    background: rgba(250,250,245,0.88);
-    backdrop-filter: blur(10px) saturate(1.05);
+    background: rgba(216,235,244,0.78);
+    backdrop-filter: blur(3px);
     border-radius: 4px;
-    border: 1px solid var(--line);
-    border-top: 3px solid var(--gold);
-    box-shadow: 0 30px 70px -35px rgba(29,43,38,0.4);
   }
   .hero-noimg .hero-actions{ justify-content:center; }
   .hero-noimg .eyebrow{ justify-content:center; color: var(--deepblue); }
@@ -410,6 +438,10 @@
     font-size:17px;
   }
   .alt{ background: var(--paper-deep); }
+  /* Alternating pastel section backgrounds (replaces the single tan/brown tone above) */
+  #services{ background: var(--pastel-blue); }
+  #providers{ background: var(--pastel-green); }
+  #health-library{ background: var(--pastel-blue); }
 
   /* ---------- ABOUT / TIMELINE (directory-board motif) ---------- */
   .timeline{
@@ -599,6 +631,11 @@
     padding: 5px 11px;
     margin-bottom: 18px;
     letter-spacing:0.02em;
+  }
+  #locations, #locations p, #locations h2, #locations h3,
+  #locations .loc-addr, #locations .loc-groups, #locations .loc-actions,
+  #locations .eyebrow, #locations .campus, #locations .loc-hours{
+    font-weight: 700;
   }
   .loc-groups{ margin-bottom: 18px; }
   .loc-groups .grp{ margin-bottom: 12px; }
@@ -1421,7 +1458,6 @@
   .cat-strip span{ transition: background .2s ease, color .2s ease, border-color .2s ease; cursor:default; }
   .cat-strip span:hover{ background: var(--pine); color: var(--white); border-color: var(--pine); }
 
-
   /* Slightly richer separation for stacked directory rows */
   .loc-card{ transition: background .25s ease; }
   .loc-card:hover{ background: rgba(250,250,245,.65); }
@@ -1432,7 +1468,6 @@
     .loc-photo img, .provider-photo img, .hero-photo img,
     .btn, .nav-cta, .loc-actions a, .loc-card{ transition:none !important; transform:none !important; }
   }
-
 
   /* ---------- ELEVATION LAYER (complements the motion block above) ---------- */
   ::selection{ background: var(--pine-pale); color: var(--pine); }
@@ -1451,14 +1486,6 @@
     nav ul a:not(.nav-cta).active::after{ right:0; }
     nav ul a.active{ color: var(--pine); }
     nav .dropdown-menu a::after{ display:none; }
-  }
-
-  .hero-chips{ display:flex; gap:10px; flex-wrap:wrap; justify-content:center; margin-top:28px; }
-  .hero-chips span{
-    font-family:'IBM Plex Mono', monospace; font-size:12px; font-weight:600;
-    letter-spacing:.04em; color:var(--pine);
-    background: rgba(255,255,255,.72); border:1px solid var(--line);
-    padding:7px 14px; border-radius:2px;
   }
 
   .provider-info summary, .article-card summary, .post-card summary{ transition: color .15s ease; }
@@ -1488,6 +1515,11 @@
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
+<div class="top-bar">
+<div class="wrap top-bar-inner">
+<a aria-label="Call Central Medical Associates at 270-600-1109" class="top-bar-phone" href="tel:+12706001109"><span class="top-bar-phone-label">Call us</span> 270-600-1109</a>
+</div>
+</div>
 <header>
 <div class="nav-inner">
 <a aria-label="Central Medical Associates home" class="brand" href="#main-content">Central Medical Associates
@@ -1533,7 +1565,7 @@
 </aside>
 <main id="main-content">
 <!-- HERO -->
-<div class="hero hero-noimg hero-bg" style="background-image: linear-gradient(180deg, rgba(241,243,236,0.40), rgba(241,243,236,0.86)), url('assets/img/hero.jpg');">
+<div class="hero hero-noimg hero-bg" style="background-image: linear-gradient(rgba(179,214,230,0.82), rgba(179,214,230,0.82)), url('assets/img/hero.jpg');">
 <div class="hero-copy">
 <div class="hero-name">Central Medical Associates</div>
 <div class="hero-subname">Quality Primary Care</div>
@@ -1544,11 +1576,6 @@
 <div class="hero-actions">
 <a class="btn btn-primary" href="#providers">Meet Our Clinicians</a>
 <a class="btn btn-ghost" href="#patients">Patient Portal</a>
-</div>
-<div class="hero-chips">
-<span>Accepting new patients</span>
-<span>All insurances accepted</span>
-<span>Telehealth visits available</span>
 </div>
 </div>
 </div>
@@ -1681,6 +1708,162 @@
 </div>
 </div>
 </section>
+<!-- PROVIDERS -->
+<section class="alt" id="providers">
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">Our team</div>
+<h2>Meet our physicians &amp; clinicians.</h2>
+<p>Twelve physicians and advanced practice clinicians, sharing decades of combined experience across Hardin County.</p>
+</div>
+<div class="providers-grid">
+<div class="provider-card">
+<div class="provider-photo"><img alt="Syed Quadri, MD, FACP portrait" decoding="async" loading="lazy" src="assets/img/providers/syed-quadri.jpg"/></div>
+<div class="provider-info">
+<h4>Syed Quadri, MD, FACP</h4>
+<div class="spec">Internal Medicine</div>
+<span class="npat">Accepting new patients</span>
+<details>
+<summary>Read full bio</summary>
+<div class="bio"><p>Dr. Syed Quadri has been a dedicated member of the CMA team since 2016, with a career spanning 42 years. He specializes in evaluating and managing complex medical conditions in adult patients.</p><p>He began his medical education at Gulbarga University in India (1984) and completed advanced training in Internal Medicine at Providence Hospital in Southfield, Michigan (1997). He has practiced in Kentucky since 1998.</p><p>Dr. Quadri served as Medical Director of the local free clinic from 2002 until its closing in 2024, and currently serves as President of the Hardin County Medical Society.</p></div>
+</details>
+</div>
+</div>
+<div class="provider-card">
+<div class="provider-photo"><img alt="Beth Morrow, PA-C portrait" decoding="async" loading="lazy" src="assets/img/providers/beth-morrow.jpg"/></div>
+<div class="provider-info">
+<h4>Beth Morrow, PA-C</h4>
+<div class="spec">Internal Medicine</div>
+<span class="npat">Accepting new patients</span>
+<details>
+<summary>Read full bio</summary>
+<div class="bio"><p>Beth Morrow is a Physician Assistant-Certified with 32 years of clinical experience, having joined CMA on February 15, 2018. Her focus is on longitudinal care — the prevention, diagnosis, and treatment of complex and chronic illnesses.</p><p>She graduated from the University of Kentucky in 1993 and has practiced across Pediatrics, Internal Medicine, and Family Practice throughout central Kentucky.</p><p>Beth volunteered at The Free Clinic from 2002 to 2024 and remains active in local charities, horse racing, art, gardening, and time with her children and grandchildren.</p></div>
+</details>
+</div>
+</div>
+<div class="provider-card">
+<div class="provider-photo"><img alt="Erica Powell, APRN portrait" decoding="async" loading="lazy" src="assets/img/providers/erica-powell.jpg"/></div>
+<div class="provider-info">
+<h4>Erica Powell, APRN</h4>
+<div class="spec">Family Practice</div>
+<span class="npat">Accepting new patients</span>
+<details>
+<summary>Read full bio</summary>
+<div class="bio"><p>Originally from Radcliff, Erica Powell served as a Registered Nurse for 19 years before transitioning to advanced practice. She joined CMA in March 2020.</p><p>She holds a Master of Science in Nursing from Chamberlain University (2019) and a Bachelor of Science in Nursing from Kaplan University (2016).</p><p>Erica's practice centers on chronic condition management and women's health — providing a supportive, empowering environment for her patients. She is currently accepting new patients.</p></div>
+</details>
+</div>
+</div>
+<div class="provider-card">
+<div class="provider-photo"><img alt="Ayaz Ahmed, MD, FACP portrait" decoding="async" loading="lazy" src="assets/img/providers/ayaz-ahmed.jpg"/></div>
+<div class="provider-info">
+<h4>Ayaz Ahmed, MD, FACP</h4>
+<div class="spec">Internal Medicine</div>
+<span class="npat">Accepting new patients</span>
+<details>
+<summary>Read full bio</summary>
+<div class="bio"><p>Dr. Ayaz Ahmed has been a pillar of the Elizabethtown medical community for nearly 30 years, providing a seamless continuum of care between clinic and hospital.</p><p>He has served as Internal Medicine Hospitalist at Baptist Health Hardin since 1996, and chaired the Department of Medicine at Hardin Memorial Hospital in 2004.</p><p>Dr. Ahmed earned his medical degree at Osmania Medical College in Hyderabad, India, and completed his Internal Medicine residency at UPMC Mercy Hospital in Pittsburgh, PA.</p></div>
+</details>
+</div>
+</div>
+<div class="provider-card">
+<div class="provider-photo"><img alt="Tanya Revor, APRN portrait" decoding="async" loading="lazy" src="assets/img/providers/tanya-revor.jpg"/></div>
+<div class="provider-info">
+<h4>Tanya Revor, APRN</h4>
+<div class="spec">Family Practice</div>
+<span class="npat">Accepting new patients</span>
+<details>
+<summary>Read full bio</summary>
+<div class="bio"><p>Tanya Revor joined CMA in September 2018 and brings 20 years of clinical experience, with a focus on chronic condition management and long-term patient relationships.</p><p>Originally from Arvada, Colorado, she earned her Bachelor's degree from the University of Louisville (2007) and her Master's from Eastern Kentucky University (2016).</p><p>Tanya serves as a clinical preceptor for nurse practitioner students each year and volunteers as a fast-pitch softball coach in the local community.</p></div>
+</details>
+</div>
+</div>
+<div class="provider-card">
+<div class="provider-photo"><img alt="Carrie Westbrook, APRN portrait" decoding="async" loading="lazy" src="assets/img/providers/carrie-westbrook.jpg"/></div>
+<div class="provider-info">
+<h4>Carrie Westbrook, APRN</h4>
+<div class="spec">Family Practice</div>
+<span class="npat">Accepting new patients</span>
+<details>
+<summary>Read full bio</summary>
+<div class="bio"><p>Carrie Westbrook is a Nurse Practitioner with a highly diverse clinical background. A Kentucky native and former military brat, her first career was as an Electronics Engineer repairing military components. Finding her passion in healthcare, she became a nurse in 2011. Carrie built a broad foundation of patient care experience—spanning geriatrics, pediatrics, psychiatry, and med-surg—before earning her NP in 2022.</p><p>Outside the clinic, she is a proud mom of three boys, an enthusiastic sideline soccer fan, and loves spending downtime at her happy place: the beach.</p></div>
+</details>
+</div>
+</div>
+<div class="provider-card">
+<div class="provider-photo"><img alt="Mujahid A. Nasir, MD portrait" decoding="async" loading="lazy" src="assets/img/providers/mujahid-nasir.jpg"/></div>
+<div class="provider-info">
+<h4>Mujahid A. Nasir, MD</h4>
+<div class="spec">Family Practice</div>
+<span class="npat">Accepting new patients</span>
+<details>
+<summary>Read full bio</summary>
+<div class="bio"><p>Dr. Mujahid A. Nasir brings approximately 30 years of medical experience to CMA. Originally from Pakistan, he provides comprehensive primary care to patients of all ages.</p><p>He earned his medical degree in 1995 from King Edward Medical College and completed postgraduate training in Family Practice at St. Vincent Mercy Hospital in Toledo, Ohio.</p><p>His focus includes preventive care, chronic disease management (hypertension, diabetes, cholesterol, arthritis), and acute sick visits. He is a member of the American Academy of Family Physicians.</p></div>
+</details>
+</div>
+</div>
+<div class="provider-card">
+<div class="provider-photo"><img alt="Jawed M. Movania, MD portrait" decoding="async" loading="lazy" src="assets/img/providers/jawed-movania.jpg"/></div>
+<div class="provider-info">
+<h4>Jawed M. Movania, MD</h4>
+<div class="spec">Internal Medicine &amp; Addiction Medicine</div>
+<span class="npat">Accepting new patients</span>
+<details>
+<summary>Read full bio</summary>
+<div class="bio"><p>With over 31 years of clinical experience, Dr. Jawed Movania joined CMA in 2016. Originally from Karachi, Pakistan, he bridges Internal Medicine and Addiction Medicine.</p><p>His practice is specialized in geriatrics, complex chronic conditions, and evidence-based treatment for opioid use disorders. He trained at Baylor College of Medicine (residency) and Dow Medical University (1990).</p><p>From 2002–2024, Dr. Movania volunteered at the local free clinic. Outside the clinic he enjoys gardening and fishkeeping.</p></div>
+</details>
+</div>
+</div>
+<div class="provider-card">
+<div class="provider-photo"><img alt="Anita F. Simpson, APRN portrait" decoding="async" loading="lazy" src="assets/img/providers/anita-simpson.jpg"/></div>
+<div class="provider-info">
+<h4>Anita F. Simpson, APRN</h4>
+<div class="spec">Family Practice</div>
+<span class="npat">Accepting new patients</span>
+<details>
+<summary>Read full bio</summary>
+<div class="bio"><p>Originally from Louisiana, Anita Simpson served as a Registered Nurse for 20 years before advancing her practice. She joined CMA in August 2021 with 25 years of total nursing experience.</p><p>She holds a Master of Science in Nursing from Herzing University &amp; Chamberlain University (2022) and has been board certified since 2021.</p><p>Anita volunteers at the local Food Bank and is deeply involved with the NAACP and the Boys &amp; Girls Club. She is currently accepting new patients.</p></div>
+</details>
+</div>
+</div>
+<div class="provider-card">
+<div class="provider-photo"><img alt="Patricia K. Williams, APRN portrait" decoding="async" loading="lazy" src="assets/img/providers/patricia-williams.jpg"/></div>
+<div class="provider-info">
+<h4>Patricia K. Williams, APRN</h4>
+<div class="spec">Family Practice</div>
+<span class="npat">Accepting new patients</span>
+<details>
+<summary>Read full bio</summary>
+<div class="bio"><p>With 30 years of dedicated service, Patricia Williams is recognized as the most experienced Nurse Practitioner in Hardin County. She recently joined CMA after over a decade in independent practice.</p><p>Patricia has collaborated with local physicians including Dr. Faulkner and Dr. Movania, and holds an MSN from Spalding University (1996).</p><p>Her practice reflects a whole-person, holistic philosophy, treating multiple generations of the same families over three decades.</p></div>
+</details>
+</div>
+</div>
+<div class="provider-card">
+<div class="provider-photo"><img alt="Kelly Keplinger Page, APRN portrait" decoding="async" loading="lazy" src="assets/img/providers/kelly-keplinger-page.jpg"/></div>
+<div class="provider-info">
+<h4>Kelly Keplinger Page, APRN</h4>
+<div class="spec">Family Practice</div>
+<span class="npat">Accepting new patients</span>
+<details>
+<summary>Read full bio</summary>
+<div class="bio"><p>An Elizabethtown native, Kelly Keplinger Page joined CMA in 2026 with 13 years of experience as a board-certified APRN, shaped by work in Rural Health Clinics and Urgent Care.</p><p>She earned her MSN from Western Kentucky University (2013) and provides continuous care across the full age spectrum, from pediatric wellness to geriatric support.</p><p>“Being able to serve the families in my home community is a privilege. I believe in providing care that is as compassionate as it is comprehensive.”</p></div>
+</details>
+</div>
+</div>
+<div class="provider-card">
+<div class="provider-photo"><img alt="Nancy Allen, PMHNP, FNP portrait" decoding="async" loading="lazy" src="assets/img/providers/nancy-allen.jpg"/></div>
+<div class="provider-info">
+<h4>Nancy Allen, PMHNP, FNP</h4>
+<div class="spec">Psychiatry &amp; Mental Health</div>
+<span class="npat">Accepting new patients</span>
+<details>
+<summary>Read full bio</summary>
+<div class="bio"><p>Nancy Allen is a dual-certified Nurse Practitioner specializing in Psychiatry and Mental Health, with over 15 years of clinical experience. She has cared for CMA patients since December 2024.</p><p>She earned her Bachelor's degree from the University of Louisville (1999) and her Master's from Graceland University (2011), holding PMHNP-C and FNP-BC certifications.</p><p>Originally from Wilburton, Pennsylvania, Nancy is an active member of the Elks Society and enjoys gardening in her free time.</p></div>
+</details>
+</div>
+</div>
+</div>
+</div>
+</section>
 <!-- LOCATIONS -->
 <section id="locations">
 <div class="wrap">
@@ -1747,7 +1930,7 @@
 </div>
 </div>
 <div class="grp">
-<div class="grp-name">CMA — Psychiatry, Suite 105 · <span class="phone"><a aria-label="Call 270-982-2002" class="phone" href="tel:+12709822002">270-982-2002</a></span></div>
+<div class="grp-name">CMA — Psychiatry, Suite 105 · <span class="phone"><a aria-label="Call 270-982-2002" class="phone" href="tel:2709822002">270-982-2002</a></span></div>
 <div class="grp-people">
 <span>Nancy Allen, PMHNP, FNP</span>
 </div>
@@ -1814,162 +1997,7 @@
 </div>
 </div>
 </section>
-<!-- PROVIDERS -->
-<section class="alt" id="providers">
-<div class="wrap">
-<div class="section-head">
-<div class="eyebrow">Our team</div>
-<h2>Meet our physicians &amp; clinicians.</h2>
-<p>Twelve physicians and advanced practice clinicians, sharing decades of combined experience across Hardin County.</p>
-</div>
-<div class="providers-grid">
-<div class="provider-card">
-<div class="provider-photo"><img alt="Syed Quadri, MD, FACP portrait" decoding="async" loading="lazy" src="assets/img/providers/syed-quadri.jpg"/></div>
-<div class="provider-info">
-<h4>Syed Quadri, MD, FACP</h4>
-<div class="spec">Internal Medicine</div>
-<span class="npat">Accepting new patients</span>
-<details>
-<summary>Read full bio</summary>
-<div class="bio"><p>Dr. Syed Quadri has been a dedicated member of the CMA team since 2016, with a career spanning 42 years. He specializes in evaluating and managing complex medical conditions in adult patients.</p><p>He began his medical education at Gulbarga University in India (1984) and completed advanced training in Internal Medicine at Providence Hospital in Southfield, Michigan (1997). He has practiced in Kentucky since 1998.</p><p>Dr. Quadri served as Medical Director of the local free clinic from 2002 until its closing in 2024, and currently serves as President of the Hardin County Medical Society.</p></div>
-</details>
-</div>
-</div>
-<div class="provider-card">
-<div class="provider-photo"><img alt="Beth Morrow, PA-C portrait" decoding="async" loading="lazy" src="assets/img/providers/beth-morrow.jpg"/></div>
-<div class="provider-info">
-<h4>Beth Morrow, PA-C</h4>
-<div class="spec">Internal Medicine</div>
-<span class="npat">Accepting new patients</span>
-<details>
-<summary>Read full bio</summary>
-<div class="bio"><p>Beth Morrow is a Physician Assistant-Certified with 32 years of clinical experience, having joined CMA on February 15, 2018. Her focus is on longitudinal care — the prevention, diagnosis, and treatment of complex and chronic illnesses.</p><p>She graduated from the University of Kentucky in 1993 and has practiced across Pediatrics, Internal Medicine, and Family Practice throughout central Kentucky.</p><p>Beth volunteered at The Free Clinic from 2002 to 2024 and remains active in local charities, horse racing, art, gardening, and time with her children and grandchildren.</p></div>
-</details>
-</div>
-</div>
-<div class="provider-card">
-<div class="provider-photo"><img alt="Erica Powell, APRN portrait" decoding="async" loading="lazy" src="assets/img/providers/erica-powell.jpg"/></div>
-<div class="provider-info">
-<h4>Erica Powell, APRN</h4>
-<div class="spec">Family Practice</div>
-<span class="npat">Accepting new patients</span>
-<details>
-<summary>Read full bio</summary>
-<div class="bio"><p>Originally from Radcliff, Erica Powell served as a Registered Nurse for 19 years before transitioning to advanced practice. She joined CMA in March 2020.</p><p>She holds a Master of Science in Nursing from Chamberlain University (2019) and a Bachelor of Science in Nursing from Kaplan University (2016).</p><p>Erica's practice centers on chronic condition management and women's health — providing a supportive, empowering environment for her patients. She is currently accepting new patients.</p></div>
-</details>
-</div>
-</div>
-<div class="provider-card">
-<div class="provider-photo"><img alt="Mujahid A. Nasir, MD portrait" decoding="async" loading="lazy" src="assets/img/providers/mujahid-nasir.jpg"/></div>
-<div class="provider-info">
-<h4>Mujahid A. Nasir, MD</h4>
-<div class="spec">Family Practice</div>
-<span class="npat">Accepting new patients</span>
-<details>
-<summary>Read full bio</summary>
-<div class="bio"><p>Dr. Mujahid A. Nasir brings approximately 30 years of medical experience to CMA. Originally from Pakistan, he provides comprehensive primary care to patients of all ages.</p><p>He earned his medical degree in 1995 from King Edward Medical College and completed postgraduate training in Family Practice at St. Vincent Mercy Hospital in Toledo, Ohio.</p><p>His focus includes preventive care, chronic disease management (hypertension, diabetes, cholesterol, arthritis), and acute sick visits. He is a member of the American Academy of Family Physicians.</p></div>
-</details>
-</div>
-</div>
-<div class="provider-card">
-<div class="provider-photo"><img alt="Ayaz Ahmed, MD, FACP portrait" decoding="async" loading="lazy" src="assets/img/providers/ayaz-ahmed.jpg"/></div>
-<div class="provider-info">
-<h4>Ayaz Ahmed, MD, FACP</h4>
-<div class="spec">Internal Medicine</div>
-<span class="npat">Accepting new patients</span>
-<details>
-<summary>Read full bio</summary>
-<div class="bio"><p>Dr. Ayaz Ahmed has been a pillar of the Elizabethtown medical community for nearly 30 years, providing a seamless continuum of care between clinic and hospital.</p><p>He has served as Internal Medicine Hospitalist at Baptist Health Hardin since 1996, and chaired the Department of Medicine at Hardin Memorial Hospital in 2004.</p><p>Dr. Ahmed earned his medical degree at Osmania Medical College in Hyderabad, India, and completed his Internal Medicine residency at UPMC Mercy Hospital in Pittsburgh, PA.</p></div>
-</details>
-</div>
-</div>
-<div class="provider-card">
-<div class="provider-photo"><img alt="Tanya Revor, APRN portrait" decoding="async" loading="lazy" src="assets/img/providers/tanya-revor.jpg"/></div>
-<div class="provider-info">
-<h4>Tanya Revor, APRN</h4>
-<div class="spec">Family Practice</div>
-<span class="npat">Accepting new patients</span>
-<details>
-<summary>Read full bio</summary>
-<div class="bio"><p>Tanya Revor joined CMA in September 2018 and brings 20 years of clinical experience, with a focus on chronic condition management and long-term patient relationships.</p><p>Originally from Arvada, Colorado, she earned her Bachelor's degree from the University of Louisville (2007) and her Master's from Eastern Kentucky University (2016).</p><p>Tanya serves as a clinical preceptor for nurse practitioner students each year and volunteers as a fast-pitch softball coach in the local community.</p></div>
-</details>
-</div>
-</div>
-<div class="provider-card">
-<div class="provider-photo"><img alt="Carrie Westbrook, APRN portrait" decoding="async" loading="lazy" src="assets/img/providers/carrie-westbrook.jpg"/></div>
-<div class="provider-info">
-<h4>Carrie Westbrook, APRN</h4>
-<div class="spec">Family Practice</div>
-<span class="npat">Accepting new patients</span>
-<details>
-<summary>Read full bio</summary>
-<div class="bio"><p>Carrie Westbrook is a Nurse Practitioner with a highly diverse clinical background. A Kentucky native and former military brat, her first career was as an Electronics Engineer repairing military components. Finding her passion in healthcare, she became a nurse in 2011. Carrie built a broad foundation of patient care experience—spanning geriatrics, pediatrics, psychiatry, and med-surg—before earning her NP in 2022.</p><p>Outside the clinic, she is a proud mom of three boys, an enthusiastic sideline soccer fan, and loves spending downtime at her happy place: the beach.</p></div>
-</details>
-</div>
-</div>
-<div class="provider-card">
-<div class="provider-photo"><img alt="Jawed M. Movania, MD portrait" decoding="async" loading="lazy" src="assets/img/providers/jawed-movania.jpg"/></div>
-<div class="provider-info">
-<h4>Jawed M. Movania, MD</h4>
-<div class="spec">Internal Medicine &amp; Addiction Medicine</div>
-<span class="npat">Accepting new patients</span>
-<details>
-<summary>Read full bio</summary>
-<div class="bio"><p>With over 31 years of clinical experience, Dr. Jawed Movania joined CMA in 2016. Originally from Karachi, Pakistan, he bridges Internal Medicine and Addiction Medicine.</p><p>His practice is specialized in geriatrics, complex chronic conditions, and evidence-based treatment for opioid use disorders. He trained at Baylor College of Medicine (residency) and Dow Medical University (1990).</p><p>From 2002–2024, Dr. Movania volunteered at the local free clinic. Outside the clinic he enjoys gardening and fishkeeping.</p></div>
-</details>
-</div>
-</div>
-<div class="provider-card">
-<div class="provider-photo"><img alt="Anita F. Simpson, APRN portrait" decoding="async" loading="lazy" src="assets/img/providers/anita-simpson.jpg"/></div>
-<div class="provider-info">
-<h4>Anita F. Simpson, APRN</h4>
-<div class="spec">Family Practice</div>
-<span class="npat">Accepting new patients</span>
-<details>
-<summary>Read full bio</summary>
-<div class="bio"><p>Originally from Louisiana, Anita Simpson served as a Registered Nurse for 20 years before advancing her practice. She joined CMA in August 2021 with 25 years of total nursing experience.</p><p>She holds a Master of Science in Nursing from Herzing University &amp; Chamberlain University (2022) and has been board certified since 2021.</p><p>Anita volunteers at the local Food Bank and is deeply involved with the NAACP and the Boys &amp; Girls Club. She is currently accepting new patients.</p></div>
-</details>
-</div>
-</div>
-<div class="provider-card">
-<div class="provider-photo"><img alt="Patricia K. Williams, APRN portrait" decoding="async" loading="lazy" src="assets/img/providers/patricia-williams.jpg"/></div>
-<div class="provider-info">
-<h4>Patricia K. Williams, APRN</h4>
-<div class="spec">Family Practice</div>
-<span class="npat">Accepting new patients</span>
-<details>
-<summary>Read full bio</summary>
-<div class="bio"><p>With 30 years of dedicated service, Patricia Williams is recognized as the most experienced Nurse Practitioner in Hardin County. She recently joined CMA after over a decade in independent practice.</p><p>Patricia has collaborated with local physicians including Dr. Faulkner and Dr. Movania, and holds an MSN from Spalding University (1996).</p><p>Her practice reflects a whole-person, holistic philosophy, treating multiple generations of the same families over three decades.</p></div>
-</details>
-</div>
-</div>
-<div class="provider-card">
-<div class="provider-photo"><img alt="Kelly Keplinger Page, APRN portrait" decoding="async" loading="lazy" src="assets/img/providers/kelly-keplinger-page.jpg"/></div>
-<div class="provider-info">
-<h4>Kelly Keplinger Page, APRN</h4>
-<div class="spec">Family Practice</div>
-<span class="npat">Accepting new patients</span>
-<details>
-<summary>Read full bio</summary>
-<div class="bio"><p>An Elizabethtown native, Kelly Keplinger Page joined CMA in 2026 with 13 years of experience as a board-certified APRN, shaped by work in Rural Health Clinics and Urgent Care.</p><p>She earned her MSN from Western Kentucky University (2013) and provides continuous care across the full age spectrum, from pediatric wellness to geriatric support.</p><p>“Being able to serve the families in my home community is a privilege. I believe in providing care that is as compassionate as it is comprehensive.”</p></div>
-</details>
-</div>
-</div>
-<div class="provider-card">
-<div class="provider-photo"><img alt="Nancy Allen, PMHNP, FNP portrait" decoding="async" loading="lazy" src="assets/img/providers/nancy-allen.jpg"/></div>
-<div class="provider-info">
-<h4>Nancy Allen, PMHNP, FNP</h4>
-<div class="spec">Psychiatry &amp; Mental Health</div>
-<span class="npat">Accepting new patients</span>
-<details>
-<summary>Read full bio</summary>
-<div class="bio"><p>Nancy Allen is a dual-certified Nurse Practitioner specializing in Psychiatry and Mental Health, with over 15 years of clinical experience. She has cared for CMA patients since December 2024.</p><p>She earned her Bachelor's degree from the University of Louisville (1999) and her Master's from Graceland University (2011), holding PMHNP-C and FNP-BC certifications.</p><p>Originally from Wilburton, Pennsylvania, Nancy is an active member of the Elks Society and enjoys gardening in her free time.</p></div>
-</details>
-</div>
-</div>
-</div>
-</div>
-</section><section id="patients">
+<section id="patients">
 <div class="wrap">
 <div class="section-head">
 <div class="eyebrow">Before your visit</div>
